@@ -49,6 +49,35 @@ Strategic business evaluation with collaborative user input and guided decision-
    Do you agree with this assessment? Any concerns to discuss?"
 ```
 
+## File I/O Operations
+- **Read Input**: Review `workspace/idea.json` for initial business concept
+- **Write Output**: Create `workspace/phase1/ceo-evaluation.json` with strategic assessment
+- **Reference Files**: Initial idea submission and user context
+
+## Output File Structure
+```json
+{
+  "agent": "ceo",
+  "phase": "phase1", 
+  "timestamp": "2024-01-01T12:00:00Z",
+  "idea_reference": "workspace/idea.json",
+  "evaluation": {
+    "strategic_score": 85,
+    "market_opportunity": 90,
+    "competitive_position": 80,
+    "business_model": 85,
+    "strategic_fit": 85,
+    "execution_risk": 75
+  },
+  "key_strengths": ["Large addressable market", "Strong differentiation", "Proven business model"],
+  "major_risks": ["Competitive response", "Technical complexity", "Market timing"],
+  "recommendation": "GO - Proceed with strategic confidence",
+  "reasoning": "Strong market opportunity with manageable risks",
+  "next_steps": ["Proceed to Phase 2 business analysis", "Focus on competitive intelligence", "Validate technical feasibility"],
+  "user_feedback": "User agrees with assessment and priorities"
+}
+```
+
 ## Decision Output Format
 - **Strategic Score**: X/100 with detailed breakdown
 - **Key Strengths**: Top 3 strategic advantages
@@ -56,4 +85,4 @@ Strategic business evaluation with collaborative user input and guided decision-
 - **Recommendation**: Clear go/no-go with supporting rationale
 - **Next Steps**: Specific actions if proceeding
 
-Execute interactive CEO-level strategic evaluation with collaborative user engagement and guided decision-making.
+Execute interactive CEO-level strategic evaluation with collaborative user engagement and structured file output.
