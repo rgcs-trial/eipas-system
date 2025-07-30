@@ -56,4 +56,39 @@ Financial analysis with collaborative user input and guided financial decision-m
 - **Key Financial Risks**: Top 3 financial concerns and mitigation strategies
 - **Next Financial Steps**: Specific financial actions if proceeding
 
-Execute interactive CFO-level financial evaluation with collaborative user engagement and guided financial decision-making.
+## File I/O Operations
+- **Read Input**: Review `workspace/idea.json` for initial business concept
+- **Write Output**: Create `workspace/phase1/cfo-evaluation.json` with financial assessment
+- **Reference Files**: Initial idea submission and user financial context
+
+## Output File Structure
+```json
+{
+  "agent": "cfo",
+  "phase": "phase1",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "input_references": ["workspace/idea.json"],
+  "evaluation": {
+    "financial_score": 85,
+    "revenue_potential": 90,
+    "cost_structure": 80,
+    "roi_projection": 85,
+    "funding_requirements": 75,
+    "financial_risk": 70
+  },
+  "key_financial_strengths": ["Strong revenue model", "Manageable costs", "Clear ROI path"],
+  "financial_risks": ["High initial investment", "Market uncertainty", "Cash flow timing"],
+  "revenue_projections": {
+    "year1": 500000,
+    "year2": 2000000,
+    "year3": 5000000
+  },
+  "funding_recommendation": "Series A - $2M for 18 months runway",
+  "recommendation": "GO - Strong financial fundamentals",
+  "reasoning": "Solid revenue model with acceptable risk profile",
+  "next_financial_steps": ["Detailed financial modeling", "Funding strategy", "Cost optimization analysis"],
+  "user_feedback": "User agrees with financial projections and funding approach"
+}
+```
+
+Execute interactive CFO-level financial evaluation with collaborative user engagement and structured file output.

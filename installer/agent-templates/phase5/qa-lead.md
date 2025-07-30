@@ -66,4 +66,93 @@ Interactive quality assurance leadership with collaborative user input and guide
 - **Recommendation**: Clear quality assessment with iteration decision
 - **Next Steps**: Specific QA actions for next iteration or release
 
-Execute interactive QA leadership with collaborative user engagement and iterative quality improvement.
+## File I/O Operations
+- **Read Input**: Review all implementation outputs from `workspace/`
+  - `phase1/` - Executive requirements and quality expectations
+  - `phase2/` - Business requirements and user acceptance criteria
+  - `phase3/` - Product requirements and architectural specifications
+  - `phase4/senior-developer-iteration-*.json` - Core functionality implementation
+  - `phase4/frontend-developer-iteration-*.json` - UI implementation and user experience
+  - `phase4/backend-developer-iteration-*.json` - API and service implementation
+  - `phase4/devops-engineer-iteration-*.json` - Infrastructure and deployment readiness
+- **Write Output**: Create iterative `workspace/phase5/qa-lead-iteration-{N}.json` files
+- **Reference Files**: All Phase 1-4 outputs and original `workspace/idea.json`
+
+## Output File Structure
+```json
+{
+  "agent": "qa-lead",
+  "phase": "phase5",
+  "iteration": 1,
+  "timestamp": "2024-01-01T12:00:00Z",
+  "input_references": [
+    "workspace/phase3/product-manager-evaluation.json",
+    "workspace/phase4/senior-developer-iteration-1.json",
+    "workspace/phase4/frontend-developer-iteration-1.json",
+    "workspace/phase4/backend-developer-iteration-1.json",
+    "workspace/phase4/devops-engineer-iteration-1.json",
+    "workspace/idea.json"
+  ],
+  "qa_strategy": {
+    "quality_score": 90,
+    "test_strategy": 92,
+    "coverage_planning": 88,
+    "risk_assessment": 91,
+    "quality_gates": 89,
+    "release_readiness": 87
+  },
+  "test_strategy": {
+    "testing_approach": "Risk-based testing with automated regression and manual exploratory testing",
+    "test_pyramid": "70% unit tests, 20% integration tests, 10% end-to-end tests",
+    "quality_framework": "Test-driven development with continuous integration and quality gates",
+    "testing_types": ["Functional", "Performance", "Security", "Usability", "Compatibility"],
+    "automation_strategy": "API test automation, UI test automation for critical paths"
+  },
+  "quality_gates": {
+    "code_quality": "90% code coverage, no critical security vulnerabilities",
+    "performance_criteria": "Page load < 3s, API response < 500ms, 99.9% uptime",
+    "functionality_gates": "All user stories pass acceptance criteria, zero P1 defects",
+    "security_requirements": "Security scan pass, penetration test pass, compliance validation",
+    "user_experience": "Usability testing pass, accessibility compliance, cross-browser compatibility"
+  },
+  "test_coverage_plan": {
+    "critical_features": ["User authentication", "Workflow execution", "Data processing", "Analytics dashboard"],
+    "high_risk_areas": ["Integration points", "Security boundaries", "Performance bottlenecks"],
+    "test_scenarios": [
+      {"feature": "Workflow Creation", "scenarios": 15, "priority": "High"},
+      {"feature": "User Management", "scenarios": 12, "priority": "High"},
+      {"feature": "Analytics Reporting", "scenarios": 8, "priority": "Medium"}
+    ]
+  },
+  "risk_assessment": {
+    "quality_risks": ["Complex integration points", "Performance under load", "Security vulnerabilities"],
+    "mitigation_strategies": [
+      {"risk": "Integration failures", "mitigation": "Early integration testing with mocks"},
+      {"risk": "Performance issues", "mitigation": "Load testing with realistic data volumes"},
+      {"risk": "Security gaps", "mitigation": "Security testing integrated into CI/CD pipeline"}
+    ],
+    "contingency_plans": "Rollback procedures, hotfix deployment process, escalation matrix"
+  },
+  "testing_timeline": {
+    "test_preparation": "3 days - Test environment setup, test data preparation",
+    "execution_phase": "5 days - Functional, integration, and performance testing",
+    "validation_phase": "2 days - User acceptance testing and final validation",
+    "total_duration": "10 days with parallel execution where possible"
+  },
+  "quality_metrics": {
+    "defect_metrics": "Defect density < 0.5 per function point, defect escape rate < 5%",
+    "test_metrics": "Test execution rate 95%, test pass rate 90%",
+    "coverage_metrics": "Code coverage 85%, requirement coverage 100%",
+    "performance_metrics": "Response time SLA met, load testing passed"
+  },
+  "iteration_status": "COMPLETED - Comprehensive QA strategy with risk-based testing approach",
+  "next_iteration_focus": ["Test automation expansion", "Performance optimization validation", "Security testing enhancement"],
+  "cross_phase_traceability": {
+    "requirements_coverage": "All product manager requirements mapped to test scenarios",
+    "implementation_validation": "Test coverage aligns with developer implementation artifacts",
+    "infrastructure_testing": "QA strategy includes DevOps deployment and infrastructure testing"
+  }
+}
+```
+
+Execute interactive QA leadership with collaborative user engagement and cross-phase quality validation.

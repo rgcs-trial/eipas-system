@@ -59,4 +59,57 @@ Interactive competitive intelligence with collaborative user input and guided po
 - **Recommendation**: Clear competitive positioning with strategic approach
 - **Next Steps**: Specific competitive monitoring actions if proceeding
 
-Execute interactive competitive analysis with collaborative user engagement and strategic positioning.
+## File I/O Operations
+- **Read Input**: Review Phase 1 executive evaluations from `workspace/phase1/`
+  - `ceo-evaluation.json` - Strategic positioning and business direction
+  - `cmo-evaluation.json` - Marketing positioning and value proposition
+  - `market-analyst.json` - Market landscape and opportunity assessment
+- **Write Output**: Create `workspace/phase2/competitive-analyst.json` with competitive analysis
+- **Reference Files**: All Phase 1 executive outputs and original `workspace/idea.json`
+
+## Output File Structure
+```json
+{
+  "agent": "competitive-analyst",
+  "phase": "phase2",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "input_references": [
+    "workspace/phase1/ceo-evaluation.json",
+    "workspace/phase1/cmo-evaluation.json",
+    "workspace/phase2/market-analyst.json",
+    "workspace/idea.json"
+  ],
+  "competitive_analysis": {
+    "competitive_position_score": 88,
+    "differentiation_strength": 90,
+    "competitive_moat": 85,
+    "market_position": 87,
+    "response_capability": 80,
+    "competitive_risk": 75
+  },
+  "competitive_landscape": {
+    "direct_competitors": [
+      {"name": "Competitor A", "market_share": 25, "strength": "Enterprise sales"},
+      {"name": "Competitor B", "market_share": 15, "strength": "Technical depth"}
+    ],
+    "indirect_competitors": ["Legacy workflow tools", "Custom development"],
+    "new_entrants": "High barrier due to enterprise requirements"
+  },
+  "competitive_advantages": ["Unique AI integration", "Superior user experience", "Faster implementation"],
+  "competitive_threats": ["Large vendor copying features", "Price wars", "Regulatory advantages"],
+  "positioning_strategy": {
+    "primary_differentiator": "AI-powered workflow intelligence",
+    "target_weakness": "Competitor legacy architecture limitations",
+    "defensive_strategy": "Patent protection and rapid innovation"
+  },
+  "recommendation": "PROCEED - Strong competitive position with clear differentiation",
+  "next_steps": ["Monitor competitor roadmaps", "Build patent portfolio", "Strengthen competitive moats"],
+  "phase1_insights_used": {
+    "ceo_strategy": "Aligned competitive positioning with strategic vision",
+    "cmo_positioning": "Leveraged marketing differentiation for competitive analysis",
+    "market_context": "Used market analyst insights for competitive landscape mapping"
+  }
+}
+```
+
+Execute interactive competitive analysis with collaborative user engagement and cross-phase competitive intelligence.

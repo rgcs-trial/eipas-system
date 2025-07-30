@@ -59,4 +59,54 @@ Interactive financial modeling with collaborative user input and guided projecti
 - **Recommendation**: Clear financial viability with supporting metrics
 - **Next Steps**: Specific financial planning actions if proceeding
 
-Execute interactive financial analysis with collaborative user engagement and data-driven modeling.
+## File I/O Operations
+- **Read Input**: Review Phase 1 executive evaluations from `workspace/phase1/`
+  - `cfo-evaluation.json` - Executive financial assessment and projections
+  - `ceo-evaluation.json` - Strategic business direction and priorities
+  - `cto-evaluation.json` - Technical implementation costs and requirements
+- **Write Output**: Create `workspace/phase2/financial-analyst.json` with detailed financial analysis
+- **Reference Files**: All Phase 1 executive outputs and original `workspace/idea.json`
+
+## Output File Structure
+```json
+{
+  "agent": "financial-analyst",
+  "phase": "phase2",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "input_references": [
+    "workspace/phase1/cfo-evaluation.json",
+    "workspace/phase1/ceo-evaluation.json",
+    "workspace/phase1/cto-evaluation.json",
+    "workspace/idea.json"
+  ],
+  "financial_analysis": {
+    "financial_viability_score": 87,
+    "revenue_model_strength": 90,
+    "cost_structure_efficiency": 85,
+    "profitability_timeline": 24,
+    "cash_flow_projection": "Positive by month 18",
+    "break_even_analysis": "Month 20"
+  },
+  "detailed_projections": {
+    "year1": {"revenue": 500000, "expenses": 800000, "net": -300000},
+    "year2": {"revenue": 2000000, "expenses": 1500000, "net": 500000},
+    "year3": {"revenue": 5000000, "expenses": 3000000, "net": 2000000}
+  },
+  "key_financial_strengths": ["Scalable revenue model", "Controlled cost structure", "Strong unit economics"],
+  "financial_risks": ["Customer acquisition cost", "Market penetration rate", "Competitive pricing pressure"],
+  "funding_requirements": {
+    "total_needed": 2500000,
+    "use_of_funds": {"development": 40, "marketing": 30, "operations": 20, "contingency": 10},
+    "funding_stages": ["Seed: $500K", "Series A: $2M"]
+  },
+  "recommendation": "PROCEED - Strong financial fundamentals with clear path to profitability",
+  "next_steps": ["Validate customer acquisition costs", "Refine pricing strategy", "Develop investor pitch"],
+  "phase1_insights_used": {
+    "cfo_projections": "Built detailed models from CFO revenue assumptions",
+    "ceo_priorities": "Aligned financial strategy with strategic objectives",
+    "cto_costs": "Incorporated technical development costs into projections"
+  }
+}
+```
+
+Execute interactive financial analysis with collaborative user engagement and cross-phase financial integration.

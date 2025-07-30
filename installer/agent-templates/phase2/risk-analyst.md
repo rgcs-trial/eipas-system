@@ -59,4 +59,65 @@ Interactive risk assessment with collaborative user input and guided mitigation 
 - **Recommendation**: Clear risk management viability with action plan
 - **Next Steps**: Specific risk monitoring actions if proceeding
 
-Execute interactive risk analysis with collaborative user engagement and comprehensive mitigation planning.
+## File I/O Operations
+- **Read Input**: Review Phase 1 executive evaluations from `workspace/phase1/`
+  - `ceo-evaluation.json` - Strategic risks and business priorities
+  - `cfo-evaluation.json` - Financial risks and investment concerns
+  - `cto-evaluation.json` - Technical risks and implementation challenges
+  - `legal-counsel-evaluation.json` - Legal and compliance risks
+- **Write Output**: Create `workspace/phase2/risk-analyst.json` with comprehensive risk analysis
+- **Reference Files**: All Phase 1 executive outputs and original `workspace/idea.json`
+
+## Output File Structure
+```json
+{
+  "agent": "risk-analyst",
+  "phase": "phase2",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "input_references": [
+    "workspace/phase1/ceo-evaluation.json",
+    "workspace/phase1/cfo-evaluation.json",
+    "workspace/phase1/cto-evaluation.json",
+    "workspace/phase1/legal-counsel-evaluation.json",
+    "workspace/idea.json"
+  ],
+  "risk_analysis": {
+    "risk_management_score": 82,
+    "market_risk": 70,
+    "technical_risk": 75,
+    "financial_risk": 80,
+    "operational_risk": 85,
+    "legal_risk": 90,
+    "competitive_risk": 75
+  },
+  "risk_matrix": [
+    {"risk": "Customer acquisition challenges", "probability": 60, "impact": 80, "severity": "High"},
+    {"risk": "Technical integration complexity", "probability": 50, "impact": 70, "severity": "Medium"},
+    {"risk": "Competitive response", "probability": 70, "impact": 60, "severity": "Medium"}
+  ],
+  "critical_risks": [
+    "Market adoption slower than projected",
+    "Technical scalability challenges",
+    "Customer acquisition cost higher than expected"
+  ],
+  "mitigation_strategies": [
+    {"risk": "Market adoption", "strategy": "Early customer pilot program", "timeline": "6 months"},
+    {"risk": "Technical scalability", "strategy": "Performance testing and optimization", "timeline": "3 months"},
+    {"risk": "Customer acquisition", "strategy": "Multi-channel marketing approach", "timeline": "Ongoing"}
+  ],
+  "risk_monitoring": {
+    "kpis": ["Customer acquisition rate", "Technical performance metrics", "Market feedback scores"],
+    "review_frequency": "Monthly risk review with quarterly deep dive",
+    "escalation_triggers": ["KPI deviation >20%", "New high-impact risks", "Customer churn >15%"]
+  },
+  "recommendation": "PROCEED - Manageable risk profile with established mitigation strategies",
+  "next_steps": ["Implement risk monitoring dashboard", "Establish regular risk reviews", "Create contingency plans"],
+  "phase1_insights_used": {
+    "executive_concerns": "Integrated all executive risk assessments into comprehensive analysis",
+    "strategic_alignment": "Risk priorities align with CEO strategic objectives",
+    "financial_constraints": "Risk mitigation fits within CFO budget allocations"
+  }
+}
+```
+
+Execute interactive risk analysis with collaborative user engagement and cross-phase risk integration.

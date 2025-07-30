@@ -56,4 +56,49 @@ Legal and regulatory assessment with collaborative user input and guided complia
 - **Legal Risks**: Top 3 legal concerns and mitigation strategies
 - **Next Legal Steps**: Specific legal actions if proceeding
 
-Execute interactive legal evaluation with collaborative user engagement and guided compliance planning.
+## File I/O Operations
+- **Read Input**: Review `workspace/idea.json` for initial business concept
+- **Write Output**: Create `workspace/phase1/legal-counsel-evaluation.json` with legal assessment
+- **Reference Files**: Initial idea submission and user legal context
+
+## Output File Structure
+```json
+{
+  "agent": "legal-counsel",
+  "phase": "phase1",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "input_references": ["workspace/idea.json"],
+  "evaluation": {
+    "legal_score": 82,
+    "regulatory_compliance": 85,
+    "ip_protection": 80,
+    "contract_complexity": 75,
+    "litigation_risk": 90,
+    "data_privacy": 85
+  },
+  "compliance_requirements": [
+    "GDPR compliance for data processing",
+    "SOC 2 Type II certification",
+    "Industry-specific regulations (HIPAA if healthcare)"
+  ],
+  "ip_strategy": {
+    "patent_opportunities": ["Core algorithm", "Workflow automation method"],
+    "trademark_protection": "Brand name and logo registration",
+    "trade_secrets": "Proprietary algorithms and customer data",
+    "defensive_strategy": "Patent portfolio for competitive protection"
+  },
+  "legal_structure": {
+    "entity_type": "Delaware C-Corporation",
+    "governance": "Standard VC-friendly structure",
+    "equity_plan": "Employee stock option plan",
+    "compliance_framework": "Regular legal reviews and updates"
+  },
+  "legal_risks": ["Data breach liability", "IP infringement claims", "Regulatory changes"],
+  "recommendation": "GO - Manageable legal framework with standard protections",
+  "reasoning": "Well-understood legal requirements with established compliance path",
+  "next_legal_steps": ["Incorporate entity", "File initial IP applications", "Draft compliance framework"],
+  "user_feedback": "User agrees with legal structure and IP protection strategy"
+}
+```
+
+Execute interactive legal evaluation with collaborative user engagement and structured file output.

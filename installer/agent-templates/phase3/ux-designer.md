@@ -59,4 +59,71 @@ Interactive user experience design with collaborative user input and guided inte
 - **Recommendation**: Clear UX design with implementation guidelines
 - **Next Steps**: Specific design actions for implementation phase
 
-Execute interactive UX design with collaborative user engagement and user-centered approach.
+## File I/O Operations
+- **Read Input**: Review previous phase outputs for UX context
+  - **Phase 1**: `workspace/phase1/` - Executive user experience priorities
+    - `cmo-evaluation.json` - Target personas and customer insights
+    - `ceo-evaluation.json` - Strategic user experience objectives
+  - **Phase 2**: `workspace/phase2/` - User research and market insights
+    - `market-analyst.json` - Target user segments and needs
+    - `competitive-analyst.json` - Competitive UX analysis
+  - **Phase 3**: `workspace/phase3/` - Product requirements
+    - `product-manager.json` - User stories and feature requirements
+- **Write Output**: Create `workspace/phase3/ux-designer.json` with UX design specifications
+- **Reference Files**: Cross-phase synthesis of user insights and product requirements
+
+## Output File Structure
+```json
+{
+  "agent": "ux-designer",
+  "phase": "phase3",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "input_references": [
+    "workspace/phase1/cmo-evaluation.json",
+    "workspace/phase2/market-analyst.json",
+    "workspace/phase3/product-manager.json",
+    "workspace/idea.json"
+  ],
+  "ux_design": {
+    "ux_design_score": 93,
+    "usability": 95,
+    "user_centricity": 92,
+    "accessibility": 90,
+    "visual_design": 88,
+    "interaction_design": 94
+  },
+  "user_research": {
+    "primary_users": "Enterprise decision makers seeking workflow efficiency",
+    "secondary_users": "Technical implementers requiring integration capabilities",
+    "user_goals": ["Faster decision-making", "Reduced manual work", "Better insights"],
+    "pain_points": ["Complex interfaces", "Poor integration", "Steep learning curves"]
+  },
+  "design_system": {
+    "design_language": "Clean, professional, enterprise-focused",
+    "color_palette": "Blue primary, neutral grays, success greens",
+    "typography": "Inter for UI, source code for technical elements",
+    "component_library": "Modular design system with reusable components"
+  },
+  "user_flows": [
+    "Onboarding: Account setup → Workflow configuration → First automation",
+    "Daily use: Dashboard → Task management → Progress tracking",
+    "Administration: User management → Workflow design → Analytics review"
+  ],
+  "key_interfaces": [
+    "Dashboard: Real-time workflow status and analytics",
+    "Workflow Builder: Drag-and-drop automation designer",
+    "Analytics: Performance insights and optimization recommendations"
+  ],
+  "design_strengths": ["Intuitive workflow builder", "Comprehensive dashboard", "Mobile-responsive design"],
+  "usability_features": ["Progressive disclosure", "Smart defaults", "Contextual help"],
+  "recommendation": "PROCEED - User-centered design with strong usability foundation",
+  "next_steps": ["Create detailed wireframes", "Build interactive prototypes", "Plan usability testing"],
+  "cross_phase_synthesis": {
+    "persona_alignment": "Design addresses CMO-identified user personas and needs",
+    "market_insights": "UX differentiators based on competitive analysis gaps",
+    "product_integration": "Design supports all product manager MVP requirements"
+  }
+}
+```
+
+Execute interactive UX design with collaborative user engagement and comprehensive cross-phase user research integration.

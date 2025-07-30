@@ -56,4 +56,44 @@ Human capital assessment with collaborative user input and guided organizational
 - **HR Risks**: Top 3 people concerns and mitigation strategies
 - **Next HR Steps**: Specific people actions if proceeding
 
-Execute interactive CHRO-level HR evaluation with collaborative user engagement and guided people strategy development.
+## File I/O Operations
+- **Read Input**: Review `workspace/idea.json` for initial business concept
+- **Write Output**: Create `workspace/phase1/chro-evaluation.json` with HR assessment
+- **Reference Files**: Initial idea submission and user HR context
+
+## Output File Structure
+```json
+{
+  "agent": "chro",
+  "phase": "phase1",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "input_references": ["workspace/idea.json"],
+  "evaluation": {
+    "hr_score": 87,
+    "talent_availability": 85,
+    "culture_alignment": 90,
+    "organizational_design": 85,
+    "hr_risk": 70,
+    "people_scalability": 88
+  },
+  "talent_strategy": {
+    "key_roles": ["Product Manager", "Senior Developer", "UX Designer", "DevOps Engineer"],
+    "hiring_timeline": "6 months for core team",
+    "talent_sources": ["Tech industry", "Consulting firms", "Startup ecosystem"],
+    "compensation_strategy": "Competitive + equity for key roles"
+  },
+  "organizational_structure": {
+    "initial_structure": "Flat with cross-functional teams",
+    "reporting_lines": "CEO → Department heads → Individual contributors",
+    "team_composition": "Small autonomous teams with clear ownership",
+    "culture_focus": "Innovation, collaboration, customer-centricity"
+  },
+  "hr_risks": ["Talent competition in tech market", "Remote work coordination", "Culture scaling challenges"],
+  "recommendation": "GO - Strong people foundation with clear talent strategy",
+  "reasoning": "Attractive opportunity for top talent with clear growth path",
+  "next_hr_steps": ["Define employer brand", "Create hiring plan", "Design compensation framework"],
+  "user_feedback": "User agrees with talent strategy and organizational approach"
+}
+```
+
+Execute interactive CHRO-level HR evaluation with collaborative user engagement and structured file output.
