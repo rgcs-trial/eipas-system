@@ -18,15 +18,23 @@ from .github import GitHubInstaller
 class EIPASInstaller:
     """Main EIPAS installation orchestrator"""
     
-    def __init__(self):
-        self.project_root = Path.cwd()
+    def __init__(self, workspace_mode=False):
+        # Support custom workspace location via EIPAS_WORKSPACE
+        workspace_env = os.getenv('EIPAS_WORKSPACE')
+        if workspace_env and workspace_mode:
+            self.project_root = Path(workspace_env).expanduser()
+        else:
+            self.project_root = Path.cwd()
+        
         self.claude_dir = self.project_root / ".claude"
         self.backup_dir = self.project_root / ".claude-backup"
+        self.workspace_mode = workspace_mode
         
     def install(self):
         """Execute complete EIPAS installation"""
-        print("🔍 Validating environment...")
-        self._validate_environment()
+        if not self.workspace_mode:
+            print("🔍 Validating environment...")
+            self._validate_environment()
         
         print("💾 Backing up existing configuration...")
         self._backup_existing()
@@ -34,8 +42,9 @@ class EIPASInstaller:
         print("🔧 Installing EIPAS core components...")
         self._install_core_components()
         
-        print("⚡ Installing enhanced features...")
-        self._install_enhanced_features()
+        if not self.workspace_mode:
+            print("⚡ Installing enhanced features...")
+            self._install_enhanced_features()
         
         print("✅ EIPAS Installation Complete!")
     
@@ -84,7 +93,14 @@ class EIPASInstaller:
         (self.claude_dir / "commands").mkdir(exist_ok=True)
         (self.claude_dir / "hooks").mkdir(exist_ok=True)
         (self.claude_dir / "tasks").mkdir(exist_ok=True)
-        print("  ✅ Created directory structure")
+        
+        # Create phase directories for workspace mode
+        if self.workspace_mode:
+            for phase in ['phase1', 'phase2', 'phase3', 'phase4', 'phase5']:
+                (self.project_root / phase).mkdir(exist_ok=True)
+            print("  ✅ Created workspace with phase directories")
+        else:
+            print("  ✅ Created directory structure")
         
         # Install components
         SettingsInstaller(self.claude_dir).install()

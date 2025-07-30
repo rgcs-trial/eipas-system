@@ -16,21 +16,23 @@ from utils.display import display_banner, display_success
 
 def main():
     """Main installer entry point"""
-    display_banner()
+    workspace_mode = len(sys.argv) > 1 and sys.argv[1] == '--workspace'
+    
+    if not workspace_mode:
+        display_banner()
     
     try:
         # Initialize installer
-        installer = EIPASInstaller()
+        installer = EIPASInstaller(workspace_mode=workspace_mode)
         
         # Run complete installation
         installer.install()
         
-        # Validate installation
-        validator = InstallationValidator()
-        validator.validate_all()
-        
-        # Display success message
-        display_success()
+        # Validate installation (skip in workspace mode)
+        if not workspace_mode:
+            validator = InstallationValidator()
+            validator.validate_all()
+            display_success()
         
     except Exception as e:
         print(f"❌ Installation failed: {str(e)}")
