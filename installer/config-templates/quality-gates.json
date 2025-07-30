@@ -1,0 +1,36 @@
+{
+  "phase1": {
+    "description": "CXO Evaluation",
+    "threshold": 95,
+    "agents": 9,
+    "required_consensus": true
+  },
+  "phase2": {
+    "description": "Business Analysis", 
+    "threshold": 90,
+    "agents": 4,
+    "required_consensus": false
+  },
+  "phase3": {
+    "description": "Product & Architecture",
+    "threshold": 95,
+    "agents": 5,
+    "required_consensus": true
+  },
+  "phase4": {
+    "description": "Implementation",
+    "threshold": 95,
+    "agents": 4,
+    "iterative": true,
+    "max_iterations": 5,
+    "checkpoint_frequency": "per_iteration"
+  },
+  "phase5": {
+    "description": "Quality Assurance",
+    "threshold": 95,
+    "agents": 4,
+    "iterative": true,
+    "max_iterations": 3,
+    "checkpoint_frequency": "per_iteration"
+  }
+}

@@ -1,0 +1,7 @@
+# EIPAS System
+.claude/tasks/memory.db
+.claude/tasks/error.log
+*.pyc
+__pycache__/
+.env
+.DS_Store

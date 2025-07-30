@@ -1,0 +1,29 @@
+{
+  "workspace": {
+    "base_path": "~/.claude/eipas-system/workspace",
+    "cleanup_completed": false,
+    "max_concurrent_workflows": 1
+  },
+  "session_management": {
+    "session_timeout": 3600,
+    "auto_save_frequency": 30,
+    "resume_capability": true
+  },
+  "logging": {
+    "level": "INFO",
+    "include_agent_details": true,
+    "include_tool_activity": true,
+    "log_rotation": true,
+    "max_log_size": "10MB"
+  },
+  "monitoring": {
+    "track_performance": true,
+    "collect_metrics": true,
+    "health_check_interval": 60
+  },
+  "security": {
+    "encrypt_sensitive_data": false,
+    "audit_trail": true,
+    "access_control": false
+  }
+}

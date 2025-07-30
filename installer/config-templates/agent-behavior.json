@@ -1,0 +1,35 @@
+{
+  "execution_mode": {
+    "phase1": "sequential",
+    "phase2": "parallel",
+    "phase3": "sequential", 
+    "phase4": "parallel",
+    "phase5": "sequential"
+  },
+  "timeout_settings": {
+    "agent_timeout": 300,
+    "phase_timeout": 1800,
+    "iteration_timeout": 900
+  },
+  "retry_policy": {
+    "max_retries": 3,
+    "retry_delay": 5,
+    "exponential_backoff": true
+  },
+  "checkpoint_settings": {
+    "enabled_phases": ["phase4", "phase5"],
+    "checkpoint_types": [
+      "code_quality",
+      "test_coverage", 
+      "bug_detection",
+      "performance",
+      "security"
+    ],
+    "auto_advance_threshold": 98
+  },
+  "github_integration": {
+    "auto_commit": true,
+    "commit_frequency": "per_phase",
+    "commit_message_template": "EIPAS: {idea} - {phase} completion"
+  }
+}
