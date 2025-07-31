@@ -27,11 +27,13 @@ def main():
             return
             
         with sqlite3.connect(db_path) as conn:
+            # Use existing tool_activity table from database schema
             conn.execute("""
                 INSERT INTO tool_activity 
                 (session_id, tool_name, tool_params, timestamp, cwd, task_context)
                 VALUES (?, ?, ?, ?, ?, ?)
             """, (session_id, tool_name, tool_params, datetime.now().isoformat(), cwd, ''))
+            conn.commit()
         
         sys.exit(0)
         

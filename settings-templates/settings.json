@@ -4,41 +4,40 @@
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "python .claude/hooks/task-tracker.py"
+        "command": "python3 .claude/hooks/task-tracker.py"
       }]
     }],
     "PostToolUse": [{
       "matcher": "Edit|Write|MultiEdit",
       "hooks": [{
         "type": "command", 
-        "command": "python .claude/hooks/progress-logger.py"
+        "command": "python3 .claude/hooks/progress-logger.py"
       }]
     }],
     "UserPromptSubmit": [{
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "python .claude/hooks/requirement-analyzer.py"
+        "command": "python3 .claude/hooks/requirement-analyzer.py"
       }]
     }],
     "SubagentStop": [{
       "matcher": "*", 
       "hooks": [{
         "type": "command",
-        "command": "python .claude/hooks/hierarchy-updater.py"
+        "command": "python3 .claude/hooks/hierarchy-updater.py"
       }]
     }],
     "Stop": [{
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "python .claude/hooks/github-integration.py"
+        "command": "python3 .claude/hooks/github-integration.py"
       }]
     }]
   },
   "env": {
     "EIPAS_TASK_DB": ".claude/tasks/memory.db",
-    "EIPAS_WORKSPACE": "~/.claude/eipas-system/workspace",
     "EIPAS_GITHUB_AUTO_COMMIT": "true"
   }
 }

@@ -11,31 +11,42 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from core.installer import EIPASInstaller
-from core.validator import InstallationValidator
-from utils.display import display_banner, display_success
+from utils.display import display_banner
 
 def main():
     """Main installer entry point"""
-    workspace_mode = len(sys.argv) > 1 and sys.argv[1] == '--workspace'
+    display_banner()
     
-    if not workspace_mode:
-        display_banner()
+    # Always check for EIPAS_WORKSPACE environment variable
+    if not os.getenv('EIPAS_WORKSPACE'):
+        print("❌ EIPAS_WORKSPACE environment variable required")
+        print("Set it: export EIPAS_WORKSPACE=/path/to/workspaces")
+        sys.exit(1)
     
     try:
-        # Initialize installer
-        installer = EIPASInstaller(workspace_mode=workspace_mode)
+        # Ask for workspace name
+        workspace_name = input("Enter workspace name: ").strip()
+        if not workspace_name:
+            print("❌ Workspace name required")
+            sys.exit(1)
+        
+        # Initialize installer with workspace name
+        installer = EIPASInstaller(workspace_name)
         
         # Run complete installation
         installer.install()
         
-        # Validate installation (skip in workspace mode)
-        if not workspace_mode:
-            validator = InstallationValidator()
-            validator.validate_all()
-            display_success()
-        
+    except FileNotFoundError as e:
+        print(f"❌ Installation failed - File not found: {str(e)}")
+        sys.exit(1)
+    except PermissionError as e:
+        print(f"❌ Installation failed - Permission denied: {str(e)}")
+        sys.exit(1)
+    except OSError as e:
+        print(f"❌ Installation failed - System error: {str(e)}")
+        sys.exit(1)
     except Exception as e:
-        print(f"❌ Installation failed: {str(e)}")
+        print(f"❌ Installation failed - Unexpected error: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":

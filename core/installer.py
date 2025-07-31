@@ -18,62 +18,35 @@ from .github import GitHubInstaller
 class EIPASInstaller:
     """Main EIPAS installation orchestrator"""
     
-    def __init__(self, workspace_mode=False):
-        # Support custom workspace location via EIPAS_WORKSPACE
-        workspace_env = os.getenv('EIPAS_WORKSPACE')
-        if workspace_env and workspace_mode:
-            self.project_root = Path(workspace_env).expanduser()
-        else:
-            self.project_root = Path.cwd()
+    def __init__(self, workspace_name):
+        # Create workspace inside EIPAS_WORKSPACE directory
+        workspace_base = Path(os.getenv('EIPAS_WORKSPACE')).expanduser()
+        self.project_root = workspace_base / workspace_name
+        
+        # Check if workspace already exists
+        if self.project_root.exists():
+            print(f"❌ Workspace '{workspace_name}' already exists at {self.project_root}")
+            sys.exit(1)
+        
+        # Create workspace directory
+        self.project_root.mkdir(parents=True, exist_ok=True)
         
         self.claude_dir = self.project_root / ".claude"
         self.backup_dir = self.project_root / ".claude-backup"
-        self.workspace_mode = workspace_mode
         
     def install(self):
         """Execute complete EIPAS installation"""
-        if not self.workspace_mode:
-            print("🔍 Validating environment...")
-            self._validate_environment()
-        
         print("💾 Backing up existing configuration...")
         self._backup_existing()
         
         print("🔧 Installing EIPAS core components...")
         self._install_core_components()
         
-        if not self.workspace_mode:
-            print("⚡ Installing enhanced features...")
-            self._install_enhanced_features()
+        print("⚡ Installing enhanced features...")
+        self._install_enhanced_features()
         
         print("✅ EIPAS Installation Complete!")
     
-    def _validate_environment(self):
-        """Validate installation environment"""
-        # Check Claude Code
-        try:
-            subprocess.run(['claude', '--version'], capture_output=True, check=True)
-            print("  ✅ Claude Code found")
-        except (subprocess.CalledProcessError, FileNotFoundError):
-            raise Exception("Claude Code not found. Please install first.")
-        
-        # Check Python
-        if not (3, 8) <= sys.version_info[:2]:
-            raise Exception("Python 3.8+ required")
-        print("  ✅ Python 3.8+ available")
-        
-        # Check Git
-        try:
-            subprocess.run(['git', 'rev-parse', '--git-dir'], 
-                          capture_output=True, check=True)
-            print("  ✅ Git repository detected")
-        except subprocess.CalledProcessError:
-            print("  ⚠️  No git repository - will initialize")
-        
-        # Check write permissions
-        if not os.access(self.project_root, os.W_OK):
-            raise Exception("No write permissions in project directory")
-        print("  ✅ Write permissions confirmed")
     
     def _backup_existing(self):
         """Backup existing Claude configuration"""
@@ -94,13 +67,10 @@ class EIPASInstaller:
         (self.claude_dir / "hooks").mkdir(exist_ok=True)
         (self.claude_dir / "tasks").mkdir(exist_ok=True)
         
-        # Create phase directories for workspace mode
-        if self.workspace_mode:
-            for phase in ['phase1', 'phase2', 'phase3', 'phase4', 'phase5']:
-                (self.project_root / phase).mkdir(exist_ok=True)
-            print("  ✅ Created workspace with phase directories")
-        else:
-            print("  ✅ Created directory structure")
+        # Always create phase directories
+        for phase in ['phase1', 'phase2', 'phase3', 'phase4', 'phase5']:
+            (self.project_root / phase).mkdir(exist_ok=True)
+        print("  ✅ Created workspace with phase directories")
         
         # Install components
         SettingsInstaller(self.claude_dir).install()
