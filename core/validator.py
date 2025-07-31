@@ -71,10 +71,14 @@ class InstallationValidator:
             "hierarchy-updater.py", "github-integration.py"
         ]
         
+        # Check .claude-agentflow hooks directory
+        eipas_dir = Path('.claude-agentflow')
+        hooks_dir = eipas_dir / "hooks"
+        
         for hook in required_hooks:
-            hook_file = self.claude_dir / "hooks" / hook
+            hook_file = hooks_dir / hook
             if not hook_file.exists():
-                raise Exception(f"Hook script {hook} not found")
+                raise Exception(f"Hook script {hook} not found in .claude-agentflow/hooks/")
             
             # Check if hook is executable
             if not os.access(hook_file, os.X_OK):
@@ -82,9 +86,10 @@ class InstallationValidator:
     
     def _check_database(self):
         """Check database is initialized"""
-        db_file = self.claude_dir / "tasks" / "memory.db"
+        eipas_dir = Path('.claude-agentflow')
+        db_file = eipas_dir / "database" / "memory.db"
         if not db_file.exists():
-            raise Exception("SQLite database not initialized")
+            raise Exception("SQLite database not initialized in .claude-agentflow/database/")
         
         # Check if essential tables exist
         with sqlite3.connect(db_file) as conn:

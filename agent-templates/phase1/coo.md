@@ -57,8 +57,8 @@ Operational assessment with collaborative user input and guided execution planni
 - **Next Operational Steps**: Specific operational actions if proceeding
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/coo-evaluation.json` with operational assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/coo-evaluation.json` with operational assessment
 - **Reference Files**: Initial idea submission and user operational context
 
 ## Output File Structure
@@ -67,7 +67,7 @@ Operational assessment with collaborative user input and guided execution planni
   "agent": "coo",
   "phase": "phase1",
   "timestamp": "2024-01-01T12:00:00Z",
-  "input_references": ["workspace/idea.json"],
+  "input_references": [".claude-agentflow/workspace/idea.json"],
   "evaluation": {
     "operational_score": 85,
     "execution_complexity": 80,

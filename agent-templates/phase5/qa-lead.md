@@ -67,7 +67,7 @@ Interactive quality assurance leadership with collaborative user input and guide
 - **Next Steps**: Specific QA actions for next iteration or release
 
 ## File I/O Operations
-- **Read Input**: Review all implementation outputs from `workspace/`
+- **Read Input**: Review all implementation outputs from `.claude-agentflow/workspace/`
   - `phase1/` - Executive requirements and quality expectations
   - `phase2/` - Business requirements and user acceptance criteria
   - `phase3/` - Product requirements and architectural specifications
@@ -75,8 +75,8 @@ Interactive quality assurance leadership with collaborative user input and guide
   - `phase4/frontend-developer-iteration-*.json` - UI implementation and user experience
   - `phase4/backend-developer-iteration-*.json` - API and service implementation
   - `phase4/devops-engineer-iteration-*.json` - Infrastructure and deployment readiness
-- **Write Output**: Create iterative `workspace/phase5/qa-lead-iteration-{N}.json` files
-- **Reference Files**: All Phase 1-4 outputs and original `workspace/idea.json`
+- **Write Output**: Create iterative `.claude-agentflow/workspace/phase5/qa-lead-iteration-{N}.json` files
+- **Reference Files**: All Phase 1-4 outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -86,12 +86,12 @@ Interactive quality assurance leadership with collaborative user input and guide
   "iteration": 1,
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase3/product-manager-evaluation.json",
-    "workspace/phase4/senior-developer-iteration-1.json",
-    "workspace/phase4/frontend-developer-iteration-1.json",
-    "workspace/phase4/backend-developer-iteration-1.json",
-    "workspace/phase4/devops-engineer-iteration-1.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase3/product-manager-evaluation.json",
+    ".claude-agentflow/workspace/phase4/senior-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/frontend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/backend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/devops-engineer-iteration-1.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "qa_strategy": {
     "quality_score": 90,

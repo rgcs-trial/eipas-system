@@ -1,12 +1,19 @@
-# EIPAS - Enterprise Idea-to-Product Automation System
+# claudeAgentFlow - Claude Agent Workflow Automation System
 
-![EIPAS Logo](https://img.shields.io/badge/EIPAS-Enterprise%20Automation-blue?style=for-the-badge)
+![claudeAgentFlow Logo](https://img.shields.io/badge/claudeAgentFlow-Workflow%20Automation-blue?style=for-the-badge)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-Integrated-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)
 
 ## 🚀 Overview
 
-The **Enterprise Idea-to-Product Automation System (EIPAS)** is a revolutionary workflow automation platform that transforms business ideas into production-ready implementations through intelligent Claude agent orchestration. The system guides users through a comprehensive 5-phase process with 32 specialized agents, ensuring thorough evaluation, design, implementation, and quality assurance.
+**claudeAgentFlow** is a revolutionary workflow automation platform that transforms business ideas into production-ready implementations through intelligent Claude agent orchestration. The system guides users through a comprehensive 5-phase process with 32 specialized agents, ensuring thorough evaluation, design, implementation, and quality assurance.
+
+### 🆕 Recent Major Updates
+- **Project Rename**: Complete transformation from EIPAS to claudeAgentFlow
+- **Consolidated Architecture**: All system files now organized in `.claude-agentflow/` directory
+- **GitHub Repository**: Renamed to `claude-agentflow` with updated remote references
+- **Claude Code Compliance**: Full integration with Claude Code CLI standards
+- **Enhanced File Structure**: Streamlined organization with proper template separation
 
 ## ✨ Key Features
 
@@ -47,8 +54,8 @@ The **Enterprise Idea-to-Product Automation System (EIPAS)** is a revolutionary 
 
 ### 1. Clone and Install
 ```bash
-git clone <repository-url> eipas-system
-cd eipas-system
+git clone https://github.com/rgcs-trial/claude-agentflow.git claude-agentflow
+cd claude-agentflow
 python install-eipas.py
 ```
 
@@ -59,8 +66,8 @@ python install-eipas.py --validate
 
 ### 3. Initialize System
 ```bash
-python eipas.py init
-python eipas.py health
+python main.py init
+python main.py health
 ```
 
 ## 🚀 Quick Start
@@ -68,29 +75,29 @@ python eipas.py health
 ### Basic Workflow Execution
 ```bash
 # Start a new workflow
-python eipas.py run "AI-powered customer service automation platform"
+python main.py run "AI-powered customer service automation platform"
 
 # Check workflow status
-python eipas.py status
+python main.py status
 
 # Resume interrupted workflow
-python eipas.py resume [workflow-id]
+python main.py resume [workflow-id]
 ```
 
 ### Interactive Agent Execution
 ```bash
 # Execute specific agent with Claude Code
-claude-code --template installer/agent-templates/phase1/ceo.md
+claude-code --template agent-templates/phase1/ceo.md
 
 # Run complete phase
-python eipas.py run-phase 1 --interactive
+python main.py run-phase 1 --interactive
 ```
 
 ## 📊 System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     EIPAS System Architecture                   │
+│                     claudeAgentFlow System Architecture                   │
 ├─────────────────────────────────────────────────────────────────┤
 │  User Interface Layer: Claude Code CLI + Interactive Prompts   │
 ├─────────────────────────────────────────────────────────────────┤
@@ -104,15 +111,24 @@ python eipas.py run-phase 1 --interactive
 
 ### Workflow Structure
 ```
-workspace/[workflow-id]/
-├── idea.json                    # Initial business concept
-├── workflow-status.json         # Progress tracking
-├── phase1/                      # Executive evaluations (9 files)
-├── phase2/                      # Business analysis (4 files)
-├── phase3/                      # Product & architecture (5 files)
-├── phase4/                      # Implementation iterations
-├── phase5/                      # QA validation iterations
-└── quality-gates/               # Quality decisions
+{workspace-name}/
+├── .claude/                     # Claude Code configuration
+│   ├── settings.json           # Hooks and environment variables
+│   ├── agents/                 # 32 specialized agent templates
+│   └── commands/               # claudeAgentFlow CLI commands
+└── .claude-agentflow/          # Consolidated claudeAgentFlow system
+    ├── config/                 # System configuration
+    ├── hooks/                  # Hook scripts
+    ├── database/
+    │   └── memory.db           # SQLite database
+    └── workspace/              # Active workflow artifacts
+        ├── idea.json           # Initial business concept
+        ├── workflow-status.json # Progress tracking
+        ├── phase1/             # Executive evaluations (9 files)
+        ├── phase2/             # Business analysis (4 files)
+        ├── phase3/             # Product & architecture (5 files)
+        ├── phase4/             # Implementation iterations
+        └── phase5/             # QA validation iterations
 ```
 
 ## 🎮 User Experience
@@ -148,56 +164,57 @@ workspace/[workflow-id]/
 ## 📚 Documentation
 
 ### Core Documentation
-- **[Workflow Execution Guide](installer/WORKFLOW_EXECUTION_GUIDE.md)** - Complete workflow execution instructions
-- **[System Architecture Overview](installer/SYSTEM_ARCHITECTURE_OVERVIEW.md)** - Technical architecture and integration
-- **[Testing Documentation](installer/TESTING_DOCUMENTATION.md)** - Comprehensive testing procedures
-- **[System Validation](installer/SYSTEM_VALIDATION.md)** - Validation and health check procedures
+- **[Workflow Execution Guide](WORKFLOW_EXECUTION_GUIDE.md)** - Complete workflow execution instructions
+- **[System Architecture Overview](SYSTEM_ARCHITECTURE_OVERVIEW.md)** - Technical architecture and integration
+- **[Testing Documentation](TESTING_DOCUMENTATION.md)** - Comprehensive testing procedures
+- **[System Validation](SYSTEM_VALIDATION.md)** - Validation and health check procedures
 
 ### Agent Templates
-- **[Phase 1 Executives](installer/agent-templates/phase1/)** - C-suite strategic evaluation
-- **[Phase 2 Analysts](installer/agent-templates/phase2/)** - Business and market analysis
-- **[Phase 3 Architects](installer/agent-templates/phase3/)** - Product and technical design
-- **[Phase 4 Developers](installer/agent-templates/phase4/)** - Implementation and infrastructure
-- **[Phase 5 QA Specialists](installer/agent-templates/phase5/)** - Quality assurance and testing
-- **[Meta Agents](installer/agent-templates/meta/)** - Workflow orchestration and management
+- **[Phase 1 Executives](agent-templates/phase1/)** - C-suite strategic evaluation
+- **[Phase 2 Analysts](agent-templates/phase2/)** - Business and market analysis
+- **[Phase 3 Architects](agent-templates/phase3/)** - Product and technical design
+- **[Phase 4 Developers](agent-templates/phase4/)** - Implementation and infrastructure
+- **[Phase 5 QA Specialists](agent-templates/phase5/)** - Quality assurance and testing
+- **[Meta Agents](agent-templates/meta/)** - Workflow orchestration and management
 
 ## 🧪 Testing and Validation
 
 ### Quick Validation
 ```bash
 # System health check
-python eipas.py health
+python main.py health
 
 # Run test workflow
-python installer/utils/test_workflow.py --quick
+python utils/system_health_check.py --quick
 
 # Validate agent templates
-python installer/core/validator.py --agents
+python core/validator.py --agents
 ```
 
 ### Comprehensive Testing
 ```bash
 # Full system test suite
-python installer/utils/comprehensive_test.py
+python utils/system_health_check.py --comprehensive
 
 # Performance benchmarking
-python installer/utils/performance_test.py --benchmark
+python core/installer.py --benchmark
 
-# Security validation
-python installer/utils/security_check.py --comprehensive
+# Security validation  
+python core/validator.py --security
 ```
 
 ## 🔧 Configuration
 
 ### System Configuration
-- **Quality Thresholds**: `installer/config-templates/quality-gates.json`
-- **Workflow Settings**: `installer/config-templates/workflow-settings.json`
-- **Agent Behavior**: `installer/config-templates/agent-behavior.json`
+- **Quality Thresholds**: `config-templates/quality-gates.json`
+- **Workflow Settings**: `config-templates/workflow-settings.json`
+- **Agent Behavior**: `config-templates/agent-behavior.json`
 
 ### Claude Code Integration
-- **Settings**: `~/.claude/eipas-system/config/eipas-config.json`
-- **Templates**: `~/.claude/eipas-system/agent-prompts/`
-- **Workspace**: `~/.claude/eipas-system/workspace/`
+- **Settings**: `.claude/settings.json` (hooks and environment variables)
+- **Agent Templates**: `agent-templates/` (32 specialized agents)
+- **Commands**: `command-templates/` (claudeAgentFlow CLI interface)
+- **System Files**: `.claude-agentflow/` (hooks, database, workspace)
 
 ## 🚨 Troubleshooting
 
@@ -210,13 +227,13 @@ python installer/utils/security_check.py --comprehensive
 ### Diagnostic Tools
 ```bash
 # Generate diagnostic report
-python installer/utils/diagnostic_generator.py --full
+python utils/system_health_check.py --diagnostic
 
 # Export system logs
-python installer/utils/log_exporter.py --recent
+python core/database.py --export-logs
 
 # System repair utility
-python installer/utils/system_repair.py --auto-fix
+python core/installer.py --repair
 ```
 
 ## 🔐 Security
@@ -251,8 +268,8 @@ python installer/utils/system_repair.py --auto-fix
 ### Development Setup
 ```bash
 # Clone repository
-git clone <repository-url> eipas-development
-cd eipas-development
+git clone https://github.com/rgcs-trial/claude-agentflow.git claude-agentflow-dev
+cd claude-agentflow-dev
 
 # Install development dependencies
 pip install -r requirements-dev.txt
@@ -263,7 +280,7 @@ python -m pytest tests/
 
 ### Adding New Agents
 1. Create agent template in appropriate phase directory
-2. Follow [File I/O Pattern](installer/agent-templates/FILE_IO_PATTERN.md)
+2. Follow [File I/O Pattern](agent-templates/FILE_IO_PATTERN.md)
 3. Add interactive mode with user approval gates
 4. Include comprehensive testing and validation
 
@@ -291,6 +308,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**EIPAS - Transforming Ideas into Products through Intelligent Automation**
+**claudeAgentFlow - Transforming Ideas into Products through Intelligent Automation**
 
 *Built with ❤️ for enterprise innovation and powered by Claude Code*

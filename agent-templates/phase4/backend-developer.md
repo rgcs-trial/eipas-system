@@ -67,15 +67,15 @@ Interactive server-side development with collaborative user input and guided API
 - **Next Steps**: Specific backend actions for next iteration or deployment
 
 ## File I/O Operations
-- **Read Input**: Review all previous phase outputs from `workspace/`
+- **Read Input**: Review all previous phase outputs from `.claude-agentflow/workspace/`
   - `phase1/cto-evaluation.json` - Technical architecture and technology stack requirements
   - `phase2/` - Business requirements and market constraints affecting backend design
   - `phase3/system-architect-evaluation.json` - System architecture and integration specifications
   - `phase3/data-architect.json` - Data models and database architecture requirements
   - `phase3/security-architect.json` - Security controls and authentication requirements
   - `phase4/senior-developer-iteration-*.json` - Core application logic and business rules
-- **Write Output**: Create iterative `workspace/phase4/backend-developer-iteration-{N}.json` files
-- **Reference Files**: All Phase 1-4 outputs and original `workspace/idea.json`
+- **Write Output**: Create iterative `.claude-agentflow/workspace/phase4/backend-developer-iteration-{N}.json` files
+- **Reference Files**: All Phase 1-4 outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -85,12 +85,12 @@ Interactive server-side development with collaborative user input and guided API
   "iteration": 1,
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/phase3/system-architect-evaluation.json",
-    "workspace/phase3/data-architect.json",
-    "workspace/phase3/security-architect.json",
-    "workspace/phase4/senior-developer-iteration-1.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/phase3/system-architect-evaluation.json",
+    ".claude-agentflow/workspace/phase3/data-architect.json",
+    ".claude-agentflow/workspace/phase3/security-architect.json",
+    ".claude-agentflow/workspace/phase4/senior-developer-iteration-1.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "backend_implementation": {
     "backend_score": 91,

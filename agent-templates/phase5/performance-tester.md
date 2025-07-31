@@ -67,7 +67,7 @@ Interactive performance testing with collaborative user input and guided optimiz
 - **Next Steps**: Specific performance actions for next iteration or release
 
 ## File I/O Operations
-- **Read Input**: Review implementation and performance requirements from `workspace/`
+- **Read Input**: Review implementation and performance requirements from `.claude-agentflow/workspace/`
   - `phase1/cto-evaluation.json` - Technical performance requirements and constraints
   - `phase2/market-analyst.json` - Expected user load and usage patterns
   - `phase3/system-architect-evaluation.json` - System architecture and scalability design
@@ -75,8 +75,8 @@ Interactive performance testing with collaborative user input and guided optimiz
   - `phase4/frontend-developer-iteration-*.json` - UI performance requirements and metrics
   - `phase4/devops-engineer-iteration-*.json` - Infrastructure capacity and scaling capabilities
   - `phase5/qa-lead-iteration-*.json` - Performance testing strategy and priorities
-- **Write Output**: Create iterative `workspace/phase5/performance-tester-iteration-{N}.json` files
-- **Reference Files**: All relevant outputs and original `workspace/idea.json`
+- **Write Output**: Create iterative `.claude-agentflow/workspace/phase5/performance-tester-iteration-{N}.json` files
+- **Reference Files**: All relevant outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -86,14 +86,14 @@ Interactive performance testing with collaborative user input and guided optimiz
   "iteration": 1,
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/phase2/market-analyst.json",
-    "workspace/phase3/system-architect-evaluation.json",
-    "workspace/phase4/backend-developer-iteration-1.json",
-    "workspace/phase4/frontend-developer-iteration-1.json",
-    "workspace/phase4/devops-engineer-iteration-1.json",
-    "workspace/phase5/qa-lead-iteration-1.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/phase2/market-analyst.json",
+    ".claude-agentflow/workspace/phase3/system-architect-evaluation.json",
+    ".claude-agentflow/workspace/phase4/backend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/frontend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/devops-engineer-iteration-1.json",
+    ".claude-agentflow/workspace/phase5/qa-lead-iteration-1.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "performance_testing": {
     "performance_score": 87,

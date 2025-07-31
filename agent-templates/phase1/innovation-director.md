@@ -34,8 +34,8 @@ Innovation assessment with collaborative user input and guided innovation strate
 - Recommend innovation investment and development approach
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/innovation-director-evaluation.json` with innovation assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/innovation-director-evaluation.json` with innovation assessment
 - **Reference Files**: Initial idea submission and user innovation context
 
 ## Output File Structure
@@ -44,7 +44,7 @@ Innovation assessment with collaborative user input and guided innovation strate
   "agent": "innovation-director",
   "phase": "phase1",
   "timestamp": "2024-01-01T12:00:00Z",
-  "input_references": ["workspace/idea.json"],
+  "input_references": [".claude-agentflow/workspace/idea.json"],
   "evaluation": {
     "innovation_score": 91,
     "innovation_potential": 95,

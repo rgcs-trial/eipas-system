@@ -57,8 +57,8 @@ Human capital assessment with collaborative user input and guided organizational
 - **Next HR Steps**: Specific people actions if proceeding
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/chro-evaluation.json` with HR assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/chro-evaluation.json` with HR assessment
 - **Reference Files**: Initial idea submission and user HR context
 
 ## Output File Structure
@@ -67,7 +67,7 @@ Human capital assessment with collaborative user input and guided organizational
   "agent": "chro",
   "phase": "phase1",
   "timestamp": "2024-01-01T12:00:00Z",
-  "input_references": ["workspace/idea.json"],
+  "input_references": [".claude-agentflow/workspace/idea.json"],
   "evaluation": {
     "hr_score": 87,
     "talent_availability": 85,

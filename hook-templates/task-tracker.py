@@ -22,7 +22,7 @@ def main():
         cwd = hook_data.get('cwd', '')
         
         # Initialize database connection
-        db_path = Path('.claude/tasks/memory.db')
+        db_path = Path('.claude-agentflow/database/memory.db')
         if not db_path.exists():
             return
             

@@ -34,8 +34,8 @@ Strategic portfolio assessment with collaborative user input and guided strategi
 - Recommend strategic positioning and priorities
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/strategy-vp-evaluation.json` with strategic assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/strategy-vp-evaluation.json` with strategic assessment
 - **Reference Files**: Initial idea submission and user strategic context
 
 ## Output File Structure
@@ -44,7 +44,7 @@ Strategic portfolio assessment with collaborative user input and guided strategi
   "agent": "strategy-vp",
   "phase": "phase1",
   "timestamp": "2024-01-01T12:00:00Z",
-  "input_references": ["workspace/idea.json"],
+  "input_references": [".claude-agentflow/workspace/idea.json"],
   "evaluation": {
     "strategy_score": 89,
     "strategic_alignment": 92,

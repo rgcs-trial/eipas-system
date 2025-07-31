@@ -57,8 +57,8 @@ Market analysis with collaborative user input and guided marketing strategy deve
 - **Next Marketing Steps**: Specific marketing actions if proceeding
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/cmo-evaluation.json` with marketing assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/cmo-evaluation.json` with marketing assessment
 - **Reference Files**: Initial idea submission and user marketing context
 
 ## Output File Structure
@@ -67,7 +67,7 @@ Market analysis with collaborative user input and guided marketing strategy deve
   "agent": "cmo",
   "phase": "phase1",
   "timestamp": "2024-01-01T12:00:00Z",
-  "input_references": ["workspace/idea.json"],
+  "input_references": [".claude-agentflow/workspace/idea.json"],
   "evaluation": {
     "marketing_score": 88,
     "market_positioning": 90,

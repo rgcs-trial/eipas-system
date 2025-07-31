@@ -57,8 +57,8 @@ Financial analysis with collaborative user input and guided financial decision-m
 - **Next Financial Steps**: Specific financial actions if proceeding
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/cfo-evaluation.json` with financial assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/cfo-evaluation.json` with financial assessment
 - **Reference Files**: Initial idea submission and user financial context
 
 ## Output File Structure
@@ -67,7 +67,7 @@ Financial analysis with collaborative user input and guided financial decision-m
   "agent": "cfo",
   "phase": "phase1",
   "timestamp": "2024-01-01T12:00:00Z",
-  "input_references": ["workspace/idea.json"],
+  "input_references": [".claude-agentflow/workspace/idea.json"],
   "evaluation": {
     "financial_score": 85,
     "revenue_potential": 90,

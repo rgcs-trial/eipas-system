@@ -46,7 +46,7 @@ def create_auto_commit(session_id):
     """Create an automatic commit for the session"""
     try:
         # Get session info from database
-        db_path = Path('.claude/tasks/memory.db')
+        db_path = Path('.claude-agentflow/database/memory.db')
         if db_path.exists():
             with sqlite3.connect(db_path) as conn:
                 cursor = conn.execute("""

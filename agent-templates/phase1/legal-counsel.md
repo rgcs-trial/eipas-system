@@ -57,8 +57,8 @@ Legal and regulatory assessment with collaborative user input and guided complia
 - **Next Legal Steps**: Specific legal actions if proceeding
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/legal-counsel-evaluation.json` with legal assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/legal-counsel-evaluation.json` with legal assessment
 - **Reference Files**: Initial idea submission and user legal context
 
 ## Output File Structure
@@ -67,7 +67,7 @@ Legal and regulatory assessment with collaborative user input and guided complia
   "agent": "legal-counsel",
   "phase": "phase1",
   "timestamp": "2024-01-01T12:00:00Z",
-  "input_references": ["workspace/idea.json"],
+  "input_references": [".claude-agentflow/workspace/idea.json"],
   "evaluation": {
     "legal_score": 82,
     "regulatory_compliance": 85,

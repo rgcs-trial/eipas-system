@@ -65,15 +65,15 @@ Interactive quality gate enforcement with collaborative user input and guided th
 - **Next Steps**: Specific quality actions for improvement or next phase preparation
 
 ## File I/O Operations
-- **Read Input**: Review all phase results and quality metrics from `workspace/`
-  - `workspace/workflow-status.json` - Overall workflow progress and phase completion status
+- **Read Input**: Review all phase results and quality metrics from `.claude-agentflow/workspace/`
+  - `.claude-agentflow/workspace/workflow-status.json` - Overall workflow progress and phase completion status
   - `phase1/*.json` - All executive evaluation scores and recommendations
   - `phase2/*.json` - All business analysis scores and assessments
   - `phase3/*.json` - All product and architecture evaluation scores
   - `phase4/*-iteration-*.json` - All implementation iteration results and quality metrics
   - `phase5/*-iteration-*.json` - All QA testing results and quality validations
-- **Write Output**: Create `workspace/quality-gates/phase-{N}-gate-decision.json` for each gate evaluation
-- **Reference Files**: All phase outputs and original `workspace/idea.json`
+- **Write Output**: Create `.claude-agentflow/workspace/quality-gates/phase-{N}-gate-decision.json` for each gate evaluation
+- **Reference Files**: All phase outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -83,12 +83,12 @@ Interactive quality gate enforcement with collaborative user input and guided th
   "gate_evaluation_for": "phase3",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase3/product-manager-evaluation.json",
-    "workspace/phase3/ux-designer-evaluation.json",
-    "workspace/phase3/system-architect-evaluation.json",
-    "workspace/phase3/data-architect.json",
-    "workspace/phase3/security-architect.json",
-    "workspace/workflow-status.json"
+    ".claude-agentflow/workspace/phase3/product-manager-evaluation.json",
+    ".claude-agentflow/workspace/phase3/ux-designer-evaluation.json",
+    ".claude-agentflow/workspace/phase3/system-architect-evaluation.json",
+    ".claude-agentflow/workspace/phase3/data-architect.json",
+    ".claude-agentflow/workspace/phase3/security-architect.json",
+    ".claude-agentflow/workspace/workflow-status.json"
   ],
   "quality_gate_evaluation": {
     "phase_score": 92,

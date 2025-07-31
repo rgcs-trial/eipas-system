@@ -22,7 +22,7 @@ def main():
         user_prompt = hook_data.get('prompt', '')
         
         # Initialize database connection
-        db_path = Path('.claude/tasks/memory.db')
+        db_path = Path('.claude-agentflow/database/memory.db')
         if not db_path.exists():
             return
             

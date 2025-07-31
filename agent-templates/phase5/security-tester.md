@@ -67,7 +67,7 @@ Interactive security testing with collaborative user input and guided vulnerabil
 - **Next Steps**: Specific security actions for next iteration or release
 
 ## File I/O Operations
-- **Read Input**: Review implementation and security requirements from `workspace/`
+- **Read Input**: Review implementation and security requirements from `.claude-agentflow/workspace/`
   - `phase1/legal-counsel-evaluation.json` - Compliance requirements and legal security needs
   - `phase2/risk-analyst.json` - Security risks and threat landscape assessment
   - `phase3/security-architect.json` - Security architecture and control specifications
@@ -75,8 +75,8 @@ Interactive security testing with collaborative user input and guided vulnerabil
   - `phase4/frontend-developer-iteration-*.json` - Client-side security and data protection
   - `phase4/devops-engineer-iteration-*.json` - Infrastructure security and deployment controls
   - `phase5/qa-lead-iteration-*.json` - Security testing strategy and priorities
-- **Write Output**: Create iterative `workspace/phase5/security-tester-iteration-{N}.json` files
-- **Reference Files**: All relevant security outputs and original `workspace/idea.json`
+- **Write Output**: Create iterative `.claude-agentflow/workspace/phase5/security-tester-iteration-{N}.json` files
+- **Reference Files**: All relevant security outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -86,14 +86,14 @@ Interactive security testing with collaborative user input and guided vulnerabil
   "iteration": 1,
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/legal-counsel-evaluation.json",
-    "workspace/phase2/risk-analyst.json",
-    "workspace/phase3/security-architect.json",
-    "workspace/phase4/backend-developer-iteration-1.json",
-    "workspace/phase4/frontend-developer-iteration-1.json",
-    "workspace/phase4/devops-engineer-iteration-1.json",
-    "workspace/phase5/qa-lead-iteration-1.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/legal-counsel-evaluation.json",
+    ".claude-agentflow/workspace/phase2/risk-analyst.json",
+    ".claude-agentflow/workspace/phase3/security-architect.json",
+    ".claude-agentflow/workspace/phase4/backend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/frontend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/devops-engineer-iteration-1.json",
+    ".claude-agentflow/workspace/phase5/qa-lead-iteration-1.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "security_testing": {
     "security_score": 89,

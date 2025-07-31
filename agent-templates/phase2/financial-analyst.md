@@ -60,12 +60,12 @@ Interactive financial modeling with collaborative user input and guided projecti
 - **Next Steps**: Specific financial planning actions if proceeding
 
 ## File I/O Operations
-- **Read Input**: Review Phase 1 executive evaluations from `workspace/phase1/`
+- **Read Input**: Review Phase 1 executive evaluations from `.claude-agentflow/workspace/phase1/`
   - `cfo-evaluation.json` - Executive financial assessment and projections
   - `ceo-evaluation.json` - Strategic business direction and priorities
   - `cto-evaluation.json` - Technical implementation costs and requirements
-- **Write Output**: Create `workspace/phase2/financial-analyst.json` with detailed financial analysis
-- **Reference Files**: All Phase 1 executive outputs and original `workspace/idea.json`
+- **Write Output**: Create `.claude-agentflow/workspace/phase2/financial-analyst.json` with detailed financial analysis
+- **Reference Files**: All Phase 1 executive outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -74,10 +74,10 @@ Interactive financial modeling with collaborative user input and guided projecti
   "phase": "phase2",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/cfo-evaluation.json",
-    "workspace/phase1/ceo-evaluation.json",
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/cfo-evaluation.json",
+    ".claude-agentflow/workspace/phase1/ceo-evaluation.json",
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "financial_analysis": {
     "financial_viability_score": 87,

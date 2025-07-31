@@ -67,13 +67,13 @@ Interactive test automation with collaborative user input and guided framework d
 - **Next Steps**: Specific automation actions for next iteration or release
 
 ## File I/O Operations
-- **Read Input**: Review implementation and QA strategy from `workspace/`
+- **Read Input**: Review implementation and QA strategy from `.claude-agentflow/workspace/`
   - `phase4/frontend-developer-iteration-*.json` - UI components and user interactions to test
   - `phase4/backend-developer-iteration-*.json` - API endpoints and business logic to validate
   - `phase4/devops-engineer-iteration-*.json` - Infrastructure and deployment processes
   - `phase5/qa-lead-iteration-*.json` - Test strategy and automation priorities
-- **Write Output**: Create iterative `workspace/phase5/test-automation-iteration-{N}.json` files
-- **Reference Files**: All Phase 4-5 outputs and original `workspace/idea.json`
+- **Write Output**: Create iterative `.claude-agentflow/workspace/phase5/test-automation-iteration-{N}.json` files
+- **Reference Files**: All Phase 4-5 outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -83,11 +83,11 @@ Interactive test automation with collaborative user input and guided framework d
   "iteration": 1,
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase4/frontend-developer-iteration-1.json",
-    "workspace/phase4/backend-developer-iteration-1.json",
-    "workspace/phase4/devops-engineer-iteration-1.json",
-    "workspace/phase5/qa-lead-iteration-1.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase4/frontend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/backend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/devops-engineer-iteration-1.json",
+    ".claude-agentflow/workspace/phase5/qa-lead-iteration-1.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "automation_implementation": {
     "automation_score": 88,

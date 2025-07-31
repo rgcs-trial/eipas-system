@@ -42,15 +42,15 @@ Show agent output, quality score, and recommendations
 ```
 
 ## Workflow File Management
-- **Initialize Workspace**: Create `workspace/` directory structure for workflow artifacts
-- **Idea Capture**: Write initial concept to `workspace/idea.json` with user input
+- **Initialize Workspace**: Create `.claude-agentflow/workspace/` directory structure for workflow artifacts
+- **Idea Capture**: Write initial concept to `.claude-agentflow/workspace/idea.json` with user input
 - **Phase Orchestration**: Ensure agents read from previous phases and write structured outputs
 - **Cross-Phase Continuity**: Maintain artifact chain from Phase 1 → 2 → 3 → 4 → 5
-- **State Management**: Track workflow progress in `workspace/workflow-status.json`
+- **State Management**: Track workflow progress in `.claude-agentflow/workspace/workflow-status.json`
 
 ## Workspace Structure
 ```
-workspace/
+.claude-agentflow/workspace/
 ├── idea.json                    # Initial business concept
 ├── workflow-status.json         # Overall progress tracking
 ├── phase1/                      # Executive evaluations
@@ -89,16 +89,16 @@ workspace/
 
 When executing EIPAS workflow:
 
-1. **READ PREVIOUS PHASE OUTPUTS**: Always check workspace/{previous-phase}/ for context
-2. **WRITE STRUCTURED RESULTS**: Create JSON files in workspace/{current-phase}/
+1. **READ PREVIOUS PHASE OUTPUTS**: Always check .claude-agentflow/workspace/{previous-phase}/ for context
+2. **WRITE STRUCTURED RESULTS**: Create JSON files in .claude-agentflow/workspace/{current-phase}/
 3. **REFERENCE CHAIN**: Include "input_references" array in all outputs
 4. **MAINTAIN CONTINUITY**: Ensure each agent builds on previous phase insights
 5. **STATUS TRACKING**: Update workflow-status.json after each phase completion
 
 Example Claude Code execution:
-- Read workspace/phase2/market-analyst.json
+- Read .claude-agentflow/workspace/phase2/market-analyst.json
 - Execute Phase 3 product-manager agent
-- Write workspace/phase3/product-manager.json
+- Write .claude-agentflow/workspace/phase3/product-manager.json
 - Reference market insights in product decisions
 ```
 

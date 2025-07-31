@@ -67,14 +67,14 @@ Interactive user interface development with collaborative user input and guided 
 - **Next Steps**: Specific UI actions for next iteration or user testing
 
 ## File I/O Operations
-- **Read Input**: Review all previous phase outputs from `workspace/`
+- **Read Input**: Review all previous phase outputs from `.claude-agentflow/workspace/`
   - `phase1/` - Executive priorities and business requirements affecting UI
   - `phase2/` - Market insights and user research influencing UX design
   - `phase3/product-manager-evaluation.json` - Product features and user experience requirements
   - `phase3/ux-designer-evaluation.json` - User interface designs and interaction patterns
   - `phase4/senior-developer-iteration-*.json` - Backend API specifications and integration points
-- **Write Output**: Create iterative `workspace/phase4/frontend-developer-iteration-{N}.json` files
-- **Reference Files**: All Phase 1-4 outputs and original `workspace/idea.json`
+- **Write Output**: Create iterative `.claude-agentflow/workspace/phase4/frontend-developer-iteration-{N}.json` files
+- **Reference Files**: All Phase 1-4 outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -84,10 +84,10 @@ Interactive user interface development with collaborative user input and guided 
   "iteration": 1,
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase3/product-manager-evaluation.json",
-    "workspace/phase3/ux-designer-evaluation.json",
-    "workspace/phase4/senior-developer-iteration-1.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase3/product-manager-evaluation.json",
+    ".claude-agentflow/workspace/phase3/ux-designer-evaluation.json",
+    ".claude-agentflow/workspace/phase4/senior-developer-iteration-1.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "frontend_implementation": {
     "ui_score": 89,

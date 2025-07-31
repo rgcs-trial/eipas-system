@@ -50,8 +50,8 @@ Technical feasibility assessment with collaborative user input and guided techni
 ```
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/cto-evaluation.json` with technical assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/cto-evaluation.json` with technical assessment
 - **Reference Files**: Initial idea submission and user technical context
 
 ## Output File Structure
@@ -60,7 +60,7 @@ Technical feasibility assessment with collaborative user input and guided techni
   "agent": "cto",
   "phase": "phase1",
   "timestamp": "2024-01-01T12:00:00Z",
-  "input_references": ["workspace/idea.json"],
+  "input_references": [".claude-agentflow/workspace/idea.json"],
   "evaluation": {
     "technical_score": 88,
     "technical_feasibility": 90,

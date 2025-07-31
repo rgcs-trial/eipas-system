@@ -60,7 +60,7 @@ Interactive data architecture with collaborative user input and guided data stra
 - **Next Steps**: Specific data actions for implementation phase
 
 ## File I/O Operations
-- **Read Input**: Review Phase 1 executive evaluations and Phase 2 business analysis from `workspace/`
+- **Read Input**: Review Phase 1 executive evaluations and Phase 2 business analysis from `.claude-agentflow/workspace/`
   - `phase1/ceo-evaluation.json` - Strategic data priorities and business objectives
   - `phase1/cto-evaluation.json` - Technical architecture and data infrastructure requirements
   - `phase1/cfo-evaluation.json` - Data investment and cost considerations
@@ -68,8 +68,8 @@ Interactive data architecture with collaborative user input and guided data stra
   - `phase2/business-analyst.json` - Business process data flows and integration points
   - `phase3/product-manager-evaluation.json` - Product data features and user analytics
   - `phase3/ux-designer-evaluation.json` - User experience data and behavioral analytics
-- **Write Output**: Create `workspace/phase3/data-architect.json` with comprehensive data architecture
-- **Reference Files**: All Phase 1-3 outputs and original `workspace/idea.json`
+- **Write Output**: Create `.claude-agentflow/workspace/phase3/data-architect.json` with comprehensive data architecture
+- **Reference Files**: All Phase 1-3 outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -78,14 +78,14 @@ Interactive data architecture with collaborative user input and guided data stra
   "phase": "phase3",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/ceo-evaluation.json",
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/phase1/cfo-evaluation.json",
-    "workspace/phase2/market-analyst.json",
-    "workspace/phase2/business-analyst.json",
-    "workspace/phase3/product-manager-evaluation.json",
-    "workspace/phase3/ux-designer-evaluation.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/ceo-evaluation.json",
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/phase1/cfo-evaluation.json",
+    ".claude-agentflow/workspace/phase2/market-analyst.json",
+    ".claude-agentflow/workspace/phase2/business-analyst.json",
+    ".claude-agentflow/workspace/phase3/product-manager-evaluation.json",
+    ".claude-agentflow/workspace/phase3/ux-designer-evaluation.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "data_architecture": {
     "data_strategy_score": 88,

@@ -53,12 +53,12 @@ Interactive market research with collaborative user input and guided analysis pr
 ```
 
 ## File I/O Operations
-- **Read Input**: Review Phase 1 executive evaluations from `workspace/phase1/`
+- **Read Input**: Review Phase 1 executive evaluations from `.claude-agentflow/workspace/phase1/`
   - `ceo-evaluation.json` - Strategic direction and priorities
   - `cto-evaluation.json` - Technical feasibility insights
   - `cfo-evaluation.json` - Financial viability markers
-- **Write Output**: Create `workspace/phase2/market-analyst.json` with market analysis
-- **Reference Files**: All Phase 1 executive outputs and original `workspace/idea.json`
+- **Write Output**: Create `.claude-agentflow/workspace/phase2/market-analyst.json` with market analysis
+- **Reference Files**: All Phase 1 executive outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -67,9 +67,9 @@ Interactive market research with collaborative user input and guided analysis pr
   "phase": "phase2",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/ceo-evaluation.json",
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/ceo-evaluation.json",
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "market_analysis": {
     "market_viability_score": 88,

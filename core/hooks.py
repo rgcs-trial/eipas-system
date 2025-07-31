@@ -8,9 +8,9 @@ from pathlib import Path
 class HookInstaller:
     """Installs EIPAS hook scripts from template library"""
     
-    def __init__(self, claude_dir):
-        self.claude_dir = Path(claude_dir)
-        self.hooks_dir = self.claude_dir / "hooks"
+    def __init__(self, eipas_dir):
+        self.eipas_dir = Path(eipas_dir)
+        self.hooks_dir = self.eipas_dir / "hooks"
         self.installer_dir = Path(__file__).parent.parent
         self.templates_dir = self.installer_dir / "hook-templates"
     

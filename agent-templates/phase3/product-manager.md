@@ -54,12 +54,12 @@ Interactive product strategy with collaborative user input and guided roadmap de
 
 ## File I/O Operations
 - **Read Input**: Review previous phase outputs for product context
-  - **Phase 1**: `workspace/phase1/` - Executive strategic direction
-  - **Phase 2**: `workspace/phase2/` - Business analysis and market insights
+  - **Phase 1**: `.claude-agentflow/workspace/phase1/` - Executive strategic direction
+  - **Phase 2**: `.claude-agentflow/workspace/phase2/` - Business analysis and market insights
     - `market-analyst.json` - TAM/SAM/SOM and competitive landscape
     - `financial-analyst.json` - Revenue model and financial projections
     - `competitive-analyst.json` - Competitive positioning analysis
-- **Write Output**: Create `workspace/phase3/product-manager.json` with product strategy
+- **Write Output**: Create `.claude-agentflow/workspace/phase3/product-manager.json` with product strategy
 - **Reference Files**: Cross-phase synthesis of strategic, business, and market inputs
 
 ## Output File Structure
@@ -69,10 +69,10 @@ Interactive product strategy with collaborative user input and guided roadmap de
   "phase": "phase3",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/ceo-evaluation.json",
-    "workspace/phase2/market-analyst.json",
-    "workspace/phase2/financial-analyst.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/ceo-evaluation.json",
+    ".claude-agentflow/workspace/phase2/market-analyst.json",
+    ".claude-agentflow/workspace/phase2/financial-analyst.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "product_strategy": {
     "product_strategy_score": 92,

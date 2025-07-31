@@ -60,7 +60,7 @@ Interactive security architecture with collaborative user input and guided threa
 - **Next Steps**: Specific security actions for implementation phase
 
 ## File I/O Operations
-- **Read Input**: Review Phase 1 executive evaluations and Phase 2 analysis from `workspace/`
+- **Read Input**: Review Phase 1 executive evaluations and Phase 2 analysis from `.claude-agentflow/workspace/`
   - `phase1/cto-evaluation.json` - Technical security requirements and infrastructure constraints
   - `phase1/legal-counsel-evaluation.json` - Compliance requirements and regulatory framework
   - `phase1/cfo-evaluation.json` - Security investment budget and ROI considerations
@@ -68,8 +68,8 @@ Interactive security architecture with collaborative user input and guided threa
   - `phase2/business-analyst.json` - Business process security needs and data flows
   - `phase3/product-manager-evaluation.json` - Product security features and user protection
   - `phase3/data-architect.json` - Data security architecture and governance requirements
-- **Write Output**: Create `workspace/phase3/security-architect.json` with comprehensive security architecture
-- **Reference Files**: All Phase 1-3 outputs and original `workspace/idea.json`
+- **Write Output**: Create `.claude-agentflow/workspace/phase3/security-architect.json` with comprehensive security architecture
+- **Reference Files**: All Phase 1-3 outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -78,14 +78,14 @@ Interactive security architecture with collaborative user input and guided threa
   "phase": "phase3",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/phase1/legal-counsel-evaluation.json",
-    "workspace/phase1/cfo-evaluation.json",
-    "workspace/phase2/risk-analyst.json",
-    "workspace/phase2/business-analyst.json",
-    "workspace/phase3/product-manager-evaluation.json",
-    "workspace/phase3/data-architect.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/phase1/legal-counsel-evaluation.json",
+    ".claude-agentflow/workspace/phase1/cfo-evaluation.json",
+    ".claude-agentflow/workspace/phase2/risk-analyst.json",
+    ".claude-agentflow/workspace/phase2/business-analyst.json",
+    ".claude-agentflow/workspace/phase3/product-manager-evaluation.json",
+    ".claude-agentflow/workspace/phase3/data-architect.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "security_architecture": {
     "security_score": 91,

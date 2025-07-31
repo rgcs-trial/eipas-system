@@ -67,7 +67,7 @@ Interactive infrastructure and operations with collaborative user input and guid
 - **Next Steps**: Specific DevOps actions for next iteration or production deployment
 
 ## File I/O Operations
-- **Read Input**: Review all previous phase outputs from `workspace/`
+- **Read Input**: Review all previous phase outputs from `.claude-agentflow/workspace/`
   - `phase1/cto-evaluation.json` - Technology stack and infrastructure requirements
   - `phase2/` - Business constraints and operational requirements
   - `phase3/system-architect-evaluation.json` - System architecture and deployment patterns
@@ -75,8 +75,8 @@ Interactive infrastructure and operations with collaborative user input and guid
   - `phase4/senior-developer-iteration-*.json` - Application architecture and deployment needs
   - `phase4/backend-developer-iteration-*.json` - Backend services and infrastructure requirements
   - `phase4/frontend-developer-iteration-*.json` - Frontend build and deployment requirements
-- **Write Output**: Create iterative `workspace/phase4/devops-engineer-iteration-{N}.json` files
-- **Reference Files**: All Phase 1-4 outputs and original `workspace/idea.json`
+- **Write Output**: Create iterative `.claude-agentflow/workspace/phase4/devops-engineer-iteration-{N}.json` files
+- **Reference Files**: All Phase 1-4 outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -86,13 +86,13 @@ Interactive infrastructure and operations with collaborative user input and guid
   "iteration": 1,
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/phase3/system-architect-evaluation.json",
-    "workspace/phase3/security-architect.json",
-    "workspace/phase4/senior-developer-iteration-1.json",
-    "workspace/phase4/backend-developer-iteration-1.json",
-    "workspace/phase4/frontend-developer-iteration-1.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/phase3/system-architect-evaluation.json",
+    ".claude-agentflow/workspace/phase3/security-architect.json",
+    ".claude-agentflow/workspace/phase4/senior-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/backend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/phase4/frontend-developer-iteration-1.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "infrastructure_implementation": {
     "devops_score": 92,

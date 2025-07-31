@@ -61,13 +61,13 @@ Interactive system architecture with collaborative user input and guided technol
 
 ## File I/O Operations
 - **Read Input**: Review previous phase outputs for technical context
-  - **Phase 1**: `workspace/phase1/` - Executive technical direction and requirements
+  - **Phase 1**: `.claude-agentflow/workspace/phase1/` - Executive technical direction and requirements
     - `cto-evaluation.json` - Technical feasibility and recommended stack
     - `ceo-evaluation.json` - Strategic technical priorities
-  - **Phase 2**: `workspace/phase2/` - Business constraints and requirements
+  - **Phase 2**: `.claude-agentflow/workspace/phase2/` - Business constraints and requirements
     - `financial-analyst.json` - Budget constraints for technology choices
     - `market-analyst.json` - Scale and performance requirements
-- **Write Output**: Create `workspace/phase3/tech-architect.json` with technical architecture
+- **Write Output**: Create `.claude-agentflow/workspace/phase3/tech-architect.json` with technical architecture
 - **Reference Files**: Cross-phase synthesis of strategic, business, and technical inputs
 
 ## Output File Structure
@@ -77,10 +77,10 @@ Interactive system architecture with collaborative user input and guided technol
   "phase": "phase3",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/phase2/financial-analyst.json",
-    "workspace/phase2/market-analyst.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/phase2/financial-analyst.json",
+    ".claude-agentflow/workspace/phase2/market-analyst.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "architecture_design": {
     "architecture_score": 92,

@@ -8,16 +8,16 @@ from pathlib import Path
 class DatabaseInstaller:
     """Installs EIPAS database schema from template library"""
     
-    def __init__(self, claude_dir):
-        self.claude_dir = Path(claude_dir)
-        self.tasks_dir = self.claude_dir / "tasks"
-        self.db_path = self.tasks_dir / "memory.db"
+    def __init__(self, eipas_dir):
+        self.eipas_dir = Path(eipas_dir)
+        self.database_dir = self.eipas_dir / "database"
+        self.db_path = self.database_dir / "memory.db"
         self.installer_dir = Path(__file__).parent.parent
         self.templates_dir = self.installer_dir / "database-templates"
     
     def install(self):
         """Install comprehensive SQLite database from template schema"""
-        self.tasks_dir.mkdir(exist_ok=True)
+        self.database_dir.mkdir(exist_ok=True)
         
         schema_template = self.templates_dir / "schema.sql"
         

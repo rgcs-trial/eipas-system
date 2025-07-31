@@ -60,13 +60,13 @@ Interactive risk assessment with collaborative user input and guided mitigation 
 - **Next Steps**: Specific risk monitoring actions if proceeding
 
 ## File I/O Operations
-- **Read Input**: Review Phase 1 executive evaluations from `workspace/phase1/`
+- **Read Input**: Review Phase 1 executive evaluations from `.claude-agentflow/workspace/phase1/`
   - `ceo-evaluation.json` - Strategic risks and business priorities
   - `cfo-evaluation.json` - Financial risks and investment concerns
   - `cto-evaluation.json` - Technical risks and implementation challenges
   - `legal-counsel-evaluation.json` - Legal and compliance risks
-- **Write Output**: Create `workspace/phase2/risk-analyst.json` with comprehensive risk analysis
-- **Reference Files**: All Phase 1 executive outputs and original `workspace/idea.json`
+- **Write Output**: Create `.claude-agentflow/workspace/phase2/risk-analyst.json` with comprehensive risk analysis
+- **Reference Files**: All Phase 1 executive outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -75,11 +75,11 @@ Interactive risk assessment with collaborative user input and guided mitigation 
   "phase": "phase2",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/ceo-evaluation.json",
-    "workspace/phase1/cfo-evaluation.json",
-    "workspace/phase1/cto-evaluation.json",
-    "workspace/phase1/legal-counsel-evaluation.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/ceo-evaluation.json",
+    ".claude-agentflow/workspace/phase1/cfo-evaluation.json",
+    ".claude-agentflow/workspace/phase1/cto-evaluation.json",
+    ".claude-agentflow/workspace/phase1/legal-counsel-evaluation.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "risk_analysis": {
     "risk_management_score": 82,

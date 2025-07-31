@@ -50,8 +50,8 @@ Strategic business evaluation with collaborative user input and guided decision-
 ```
 
 ## File I/O Operations
-- **Read Input**: Review `workspace/idea.json` for initial business concept
-- **Write Output**: Create `workspace/phase1/ceo-evaluation.json` with strategic assessment
+- **Read Input**: Review `.claude-agentflow/workspace/idea.json` for initial business concept
+- **Write Output**: Create `.claude-agentflow/workspace/phase1/ceo-evaluation.json` with strategic assessment
 - **Reference Files**: Initial idea submission and user context
 
 ## Output File Structure
@@ -60,7 +60,7 @@ Strategic business evaluation with collaborative user input and guided decision-
   "agent": "ceo",
   "phase": "phase1", 
   "timestamp": "2024-01-01T12:00:00Z",
-  "idea_reference": "workspace/idea.json",
+  "idea_reference": ".claude-agentflow/workspace/idea.json",
   "evaluation": {
     "strategic_score": 85,
     "market_opportunity": 90,

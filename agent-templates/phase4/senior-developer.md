@@ -61,13 +61,13 @@ Interactive core application development with collaborative user input and guide
 
 ## File I/O Operations
 - **Read Input**: Comprehensive review of all previous phase artifacts
-  - **Phase 1**: `workspace/phase1/` - Executive strategic requirements
-  - **Phase 2**: `workspace/phase2/` - Business requirements and market constraints  
-  - **Phase 3**: `workspace/phase3/` - Product specifications and architecture
+  - **Phase 1**: `.claude-agentflow/workspace/phase1/` - Executive strategic requirements
+  - **Phase 2**: `.claude-agentflow/workspace/phase2/` - Business requirements and market constraints  
+  - **Phase 3**: `.claude-agentflow/workspace/phase3/` - Product specifications and architecture
     - `product-manager.json` - MVP features and success metrics
     - `tech-architect.json` - System architecture and technology stack
     - `ux-designer.json` - User interface specifications and design system
-- **Write Output**: Create iterative development artifacts in `workspace/phase4/`
+- **Write Output**: Create iterative development artifacts in `.claude-agentflow/workspace/phase4/`
   - `senior-developer-iteration-{N}.json` - Development progress per iteration
   - `code-review-{N}.json` - Code quality assessments
   - `implementation-status.json` - Overall development status
@@ -81,10 +81,10 @@ Interactive core application development with collaborative user input and guide
   "iteration": 1,
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase3/product-manager.json",
-    "workspace/phase3/tech-architect.json", 
-    "workspace/phase3/ux-designer.json",
-    "workspace/phase2/market-analyst.json"
+    ".claude-agentflow/workspace/phase3/product-manager.json",
+    ".claude-agentflow/workspace/phase3/tech-architect.json", 
+    ".claude-agentflow/workspace/phase3/ux-designer.json",
+    ".claude-agentflow/workspace/phase2/market-analyst.json"
   ],
   "implementation_progress": {
     "implementation_score": 88,

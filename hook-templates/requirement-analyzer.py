@@ -25,7 +25,7 @@ def main():
             sys.exit(0)
         
         # Initialize database connection
-        db_path = Path('.claude/tasks/memory.db')
+        db_path = Path('.claude-agentflow/database/memory.db')
         if not db_path.exists():
             return
             

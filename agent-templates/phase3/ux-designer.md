@@ -61,15 +61,15 @@ Interactive user experience design with collaborative user input and guided inte
 
 ## File I/O Operations
 - **Read Input**: Review previous phase outputs for UX context
-  - **Phase 1**: `workspace/phase1/` - Executive user experience priorities
+  - **Phase 1**: `.claude-agentflow/workspace/phase1/` - Executive user experience priorities
     - `cmo-evaluation.json` - Target personas and customer insights
     - `ceo-evaluation.json` - Strategic user experience objectives
-  - **Phase 2**: `workspace/phase2/` - User research and market insights
+  - **Phase 2**: `.claude-agentflow/workspace/phase2/` - User research and market insights
     - `market-analyst.json` - Target user segments and needs
     - `competitive-analyst.json` - Competitive UX analysis
-  - **Phase 3**: `workspace/phase3/` - Product requirements
+  - **Phase 3**: `.claude-agentflow/workspace/phase3/` - Product requirements
     - `product-manager.json` - User stories and feature requirements
-- **Write Output**: Create `workspace/phase3/ux-designer.json` with UX design specifications
+- **Write Output**: Create `.claude-agentflow/workspace/phase3/ux-designer.json` with UX design specifications
 - **Reference Files**: Cross-phase synthesis of user insights and product requirements
 
 ## Output File Structure
@@ -79,10 +79,10 @@ Interactive user experience design with collaborative user input and guided inte
   "phase": "phase3",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/cmo-evaluation.json",
-    "workspace/phase2/market-analyst.json",
-    "workspace/phase3/product-manager.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/cmo-evaluation.json",
+    ".claude-agentflow/workspace/phase2/market-analyst.json",
+    ".claude-agentflow/workspace/phase3/product-manager.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "ux_design": {
     "ux_design_score": 93,

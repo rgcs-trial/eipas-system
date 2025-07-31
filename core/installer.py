@@ -60,25 +60,32 @@ class EIPASInstaller:
     
     def _install_core_components(self):
         """Install core EIPAS components"""
-        # Create directory structure
+        # Create Claude Code standard directories
         self.claude_dir.mkdir(exist_ok=True)
         (self.claude_dir / "agents").mkdir(exist_ok=True)
         (self.claude_dir / "commands").mkdir(exist_ok=True)
-        (self.claude_dir / "hooks").mkdir(exist_ok=True)
-        (self.claude_dir / "tasks").mkdir(exist_ok=True)
         
-        # Always create phase directories
+        # Create consolidated EIPAS directory structure
+        self.eipas_dir = self.project_root / ".claude-agentflow"
+        self.eipas_dir.mkdir(exist_ok=True)
+        (self.eipas_dir / "config").mkdir(exist_ok=True)
+        (self.eipas_dir / "hooks").mkdir(exist_ok=True)
+        (self.eipas_dir / "database").mkdir(exist_ok=True)
+        (self.eipas_dir / "workspace").mkdir(exist_ok=True)
+        
+        # Create single workspace phase structure (eliminates duplication)
+        workspace_dir = self.eipas_dir / "workspace"
         for phase in ['phase1', 'phase2', 'phase3', 'phase4', 'phase5']:
-            (self.project_root / phase).mkdir(exist_ok=True)
-        print("  ✅ Created workspace with phase directories")
+            (workspace_dir / phase).mkdir(exist_ok=True)
+        print("  ✅ Created consolidated .claude-agentflow structure with single workspace")
         
         # Install components
         SettingsInstaller(self.claude_dir).install()
         AgentInstaller(self.claude_dir).install()
         CommandInstaller(self.claude_dir).install()
-        HookInstaller(self.claude_dir).install()
+        HookInstaller(self.eipas_dir).install()
     
     def _install_enhanced_features(self):
         """Install enhanced EIPAS features"""
-        DatabaseInstaller(self.claude_dir).install()
+        DatabaseInstaller(self.eipas_dir).install()
         GitHubInstaller(self.project_root).install()

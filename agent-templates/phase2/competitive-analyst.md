@@ -60,12 +60,12 @@ Interactive competitive intelligence with collaborative user input and guided po
 - **Next Steps**: Specific competitive monitoring actions if proceeding
 
 ## File I/O Operations
-- **Read Input**: Review Phase 1 executive evaluations from `workspace/phase1/`
+- **Read Input**: Review Phase 1 executive evaluations from `.claude-agentflow/workspace/phase1/`
   - `ceo-evaluation.json` - Strategic positioning and business direction
   - `cmo-evaluation.json` - Marketing positioning and value proposition
   - `market-analyst.json` - Market landscape and opportunity assessment
-- **Write Output**: Create `workspace/phase2/competitive-analyst.json` with competitive analysis
-- **Reference Files**: All Phase 1 executive outputs and original `workspace/idea.json`
+- **Write Output**: Create `.claude-agentflow/workspace/phase2/competitive-analyst.json` with competitive analysis
+- **Reference Files**: All Phase 1 executive outputs and original `.claude-agentflow/workspace/idea.json`
 
 ## Output File Structure
 ```json
@@ -74,10 +74,10 @@ Interactive competitive intelligence with collaborative user input and guided po
   "phase": "phase2",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/phase1/ceo-evaluation.json",
-    "workspace/phase1/cmo-evaluation.json",
-    "workspace/phase2/market-analyst.json",
-    "workspace/idea.json"
+    ".claude-agentflow/workspace/phase1/ceo-evaluation.json",
+    ".claude-agentflow/workspace/phase1/cmo-evaluation.json",
+    ".claude-agentflow/workspace/phase2/market-analyst.json",
+    ".claude-agentflow/workspace/idea.json"
   ],
   "competitive_analysis": {
     "competitive_position_score": 88,

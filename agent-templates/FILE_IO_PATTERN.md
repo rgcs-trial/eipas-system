@@ -6,12 +6,12 @@ Add this section before the final "Execute interactive..." line in each agent:
 
 ```markdown
 ## File I/O Operations
-- **Read Input**: Review relevant previous phase outputs from workspace/
-  - **Phase 1**: `workspace/phase1/` - Executive strategic evaluations
-  - **Phase 2**: `workspace/phase2/` - Business analysis and market insights  
-  - **Phase 3**: `workspace/phase3/` - Product strategy and architecture
-  - **Phase 4**: `workspace/phase4/` - Implementation progress and code artifacts
-- **Write Output**: Create `workspace/phase{N}/{agent-name}.json` with evaluation results
+- **Read Input**: Review relevant previous phase outputs from .claude-agentflow/workspace/
+  - **Phase 1**: `.claude-agentflow/workspace/phase1/` - Executive strategic evaluations
+  - **Phase 2**: `.claude-agentflow/workspace/phase2/` - Business analysis and market insights  
+  - **Phase 3**: `.claude-agentflow/workspace/phase3/` - Product strategy and architecture
+  - **Phase 4**: `.claude-agentflow/workspace/phase4/` - Implementation progress and code artifacts
+- **Write Output**: Create `.claude-agentflow/workspace/phase{N}/{agent-name}.json` with evaluation results
 - **Reference Files**: Cross-phase synthesis of all relevant workflow context
 
 ## Output File Structure
@@ -21,8 +21,8 @@ Add this section before the final "Execute interactive..." line in each agent:
   "phase": "phase{N}",
   "timestamp": "2024-01-01T12:00:00Z",
   "input_references": [
-    "workspace/idea.json",
-    "workspace/phase{N-1}/{relevant-agent}.json"
+    ".claude-agentflow/workspace/idea.json",
+    ".claude-agentflow/workspace/phase{N-1}/{relevant-agent}.json"
   ],
   "evaluation": {
     "{agent}_score": 85,
@@ -46,28 +46,28 @@ Add this section before the final "Execute interactive..." line in each agent:
 ## Phase-Specific Input Patterns
 
 ### Phase 1 Agents (Executives)
-- **Read**: `workspace/idea.json` (initial business concept)
-- **Write**: `workspace/phase1/{agent-name}-evaluation.json`
+- **Read**: `.claude-agentflow/workspace/idea.json` (initial business concept)
+- **Write**: `.claude-agentflow/workspace/phase1/{agent-name}-evaluation.json`
 
 ### Phase 2 Agents (Business Analysis)  
-- **Read**: All `workspace/phase1/*.json` files for strategic context
-- **Write**: `workspace/phase2/{agent-name}.json`
+- **Read**: All `.claude-agentflow/workspace/phase1/*.json` files for strategic context
+- **Write**: `.claude-agentflow/workspace/phase2/{agent-name}.json`
 
 ### Phase 3 Agents (Architecture)
-- **Read**: `workspace/phase1/` and `workspace/phase2/` for requirements
-- **Write**: `workspace/phase3/{agent-name}.json`
+- **Read**: `.claude-agentflow/workspace/phase1/` and `.claude-agentflow/workspace/phase2/` for requirements
+- **Write**: `.claude-agentflow/workspace/phase3/{agent-name}.json`
 
 ### Phase 4 Agents (Implementation)
-- **Read**: `workspace/phase1/`, `phase2/`, `phase3/` for complete context
-- **Write**: `workspace/phase4/{agent-name}-iteration-{N}.json` (iterative)
+- **Read**: `.claude-agentflow/workspace/phase1/`, `phase2/`, `phase3/` for complete context
+- **Write**: `.claude-agentflow/workspace/phase4/{agent-name}-iteration-{N}.json` (iterative)
 
 ### Phase 5 Agents (QA)
 - **Read**: All previous phases plus Phase 4 implementation artifacts
-- **Write**: `workspace/phase5/{agent-name}-iteration-{N}.json` (iterative)
+- **Write**: `.claude-agentflow/workspace/phase5/{agent-name}-iteration-{N}.json` (iterative)
 
 ### Meta Agents
 - **Read**: All relevant phase outputs based on agent scope
-- **Write**: `workspace/meta/{agent-name}-analysis.json`
+- **Write**: `.claude-agentflow/workspace/meta/{agent-name}-analysis.json`
 ```
 
 ## Instructions for Implementation
