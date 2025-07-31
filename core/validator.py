@@ -53,10 +53,10 @@ class InstallationValidator:
         if not agents_dir.exists():
             raise Exception("Agents directory not found")
         
-        # Count expected agents: 9 + 4 + 5 + 4 + 4 + 6 = 32 total
+        # Count expected agents: 10 + 4 + 5 + 4 + 4 + 6 = 33 total
         agent_files = list(agents_dir.glob("*.md"))
-        if len(agent_files) < 32:
-            raise Exception(f"Expected 32+ agents, found {len(agent_files)}")
+        if len(agent_files) < 33:
+            raise Exception(f"Expected 33+ agents, found {len(agent_files)}")
     
     def _check_commands(self):
         """Check commands are installed"""

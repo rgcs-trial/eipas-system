@@ -6,7 +6,7 @@
 
 ## 🚀 Overview
 
-**claudeAgentFlow** is a revolutionary workflow automation platform that transforms business ideas into production-ready implementations through intelligent Claude agent orchestration. The system guides users through a comprehensive 5-phase process with 32 specialized agents, ensuring thorough evaluation, design, implementation, and quality assurance.
+**claudeAgentFlow** is a revolutionary workflow automation platform that transforms business ideas into production-ready implementations through intelligent Claude agent orchestration. The system guides users through a comprehensive 5-phase process with 33 specialized agents, ensuring thorough evaluation, design, implementation, and quality assurance.
 
 ### 🆕 Recent Major Updates
 - **Project Rename**: Complete transformation from EIPAS to claudeAgentFlow
@@ -17,10 +17,10 @@
 
 ## ✨ Key Features
 
-### 🤖 **32 Specialized Claude Agents**
-- **Phase 1**: 9 Executive Agents (CEO, CTO, CFO, CMO, COO, CHRO, Legal, Strategy VP, Innovation Director)
-- **Phase 2**: 4 Business Analysis Agents (Market, Business, Competitive, Risk Analysts)
-- **Phase 3**: 5 Product & Architecture Agents (Product Manager, UX Designer, System/Data/Security Architects)
+### 🤖 **33 Specialized Claude Agents**
+- **Phase 1**: 10 Executive Agents (CEO, CTO, CFO, CMO, COO, CHRO, CPO, Legal, Strategy VP, Innovation Director)
+- **Phase 2**: 4 Business Analysis Agents (Market, Financial, Competitive, Risk Analysts)
+- **Phase 3**: 5 Product & Architecture Agents (Product Manager, UX Designer, Tech/Data/Security Architects)
 - **Phase 4**: 4 Implementation Agents (Senior/Frontend/Backend Developers, DevOps Engineer)
 - **Phase 5**: 4 Quality Assurance Agents (QA Lead, Test Automation, Performance/Security Testers)
 - **Meta**: 6 Orchestration Agents (Workflow management and quality gates)
@@ -103,7 +103,7 @@ python main.py run-phase 1 --interactive
 ├─────────────────────────────────────────────────────────────────┤
 │  Orchestration Layer: Workflow Engine + Quality Gates          │
 ├─────────────────────────────────────────────────────────────────┤
-│  Agent Execution Layer: 32 Specialized Claude Agents           │
+│  Agent Execution Layer: 33 Specialized Claude Agents           │
 ├─────────────────────────────────────────────────────────────────┤
 │  Data Persistence Layer: JSON Artifacts + Cross-Phase I/O      │
 └─────────────────────────────────────────────────────────────────┘
@@ -124,7 +124,7 @@ python main.py run-phase 1 --interactive
     └── workspace/              # Active workflow artifacts
         ├── idea.json           # Initial business concept
         ├── workflow-status.json # Progress tracking
-        ├── phase1/             # Executive evaluations (9 files)
+        ├── phase1/             # Executive evaluations (10 files)
         ├── phase2/             # Business analysis (4 files)
         ├── phase3/             # Product & architecture (5 files)
         ├── phase4/             # Implementation iterations
@@ -212,7 +212,7 @@ python core/validator.py --security
 
 ### Claude Code Integration
 - **Settings**: `.claude/settings.json` (hooks and environment variables)
-- **Agent Templates**: `agent-templates/` (32 specialized agents)
+- **Agent Templates**: `agent-templates/` (33 specialized agents)
 - **Commands**: `command-templates/` (claudeAgentFlow CLI interface)
 - **System Files**: `.claude-agentflow/` (hooks, database, workspace)
 
